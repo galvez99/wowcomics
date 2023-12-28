@@ -7,6 +7,9 @@
 
 body {
     background-color: white;
+    position: relative;
+    padding-bottom: 3em;
+    min-height: 100vh;
 }
 
 nav {
@@ -15,8 +18,8 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
     color: white;
+    margin-left: -30px;
 }
 
 nav a {
@@ -40,7 +43,7 @@ a:hover {
 
 #contacto a:hover,
 #esp a:hover {
-    color: #fcf803 
+    color: #fcf803; 
 }
 
 .search-bar {
@@ -114,7 +117,7 @@ footer {
 }
 
 footer .elemento:nth-child(1)::before {
-    content: "2023 ";
+    content: "2024 ";
 }
 
 footer .elemento:nth-child(6)::before {
@@ -122,7 +125,7 @@ footer .elemento:nth-child(6)::before {
 }
 
 footer .elemento:nth-child(8)::before {
-    content: "¿Alguna Duda?";
+    content: "Sobre Nosotros";
 }
 
 .dropdown {
@@ -167,6 +170,10 @@ footer .elemento:nth-child(8)::before {
     display: none;
 }
 
+#banergrande{
+    display: none;
+}
+
 #mobile-dropdown{
     display: none;
 }
@@ -176,18 +183,13 @@ footer .elemento:nth-child(8)::before {
 }
 
 
-#carouselExample {
-    position: relative;
-    z-index: 1; 
-}
-
 
 @media (max-width: 767px) {
-    #logoheader {
-        display: none;
+    nav {
+        margin-left: 0px;
     }
 
-    #banertablet {
+    #logoheader, #baner1, #baner2, #banertablet, #baner3, #banergrande {
         display: none;
     }
 
@@ -201,7 +203,7 @@ footer .elemento:nth-child(8)::before {
         display: block;
         height: 80px; 
         width: auto;
-        margin-left: -18px;
+        margin-left: -25px;
     }
 
     .dropdown {
@@ -210,8 +212,8 @@ footer .elemento:nth-child(8)::before {
 
     .search-bar {
         display: inline-block;
-        margin-left: 15px;
-        margin-right: -5px;
+        margin-left: 20px;
+        margin-right: -1px;
         width: 70%; 
         box-sizing: border-box;
     }
@@ -221,7 +223,7 @@ footer .elemento:nth-child(8)::before {
     }
 
     .icons{
-        margin-right: -65px;
+        margin-right: -48px;
     }
 
     #cliente{
@@ -236,19 +238,13 @@ footer .elemento:nth-child(8)::before {
         display: flex;
         align-items: center;
         cursor: pointer;
-        position: relative; /* Añade un posicionamiento */
-        z-index: 2; /* Ajusta este valor según sea necesario */
+        position: relative; 
+        z-index: 2; 
     }
 
     .menu-icon {
         font-size: 30px;
-        margin-left: 5px;
-    }
-
-    
-    #carouselExample {
-        position: relative; /* Añade un posicionamiento */
-        z-index: 1; /* Ajusta este valor según sea necesario */
+        margin-left: -18px;
     }
     
     .dropdown-content-mobile {
@@ -257,9 +253,9 @@ footer .elemento:nth-child(8)::before {
         position: absolute;
         background-color: #002b80;
         width: 250px;
-        z-index: 3; /* Ajusta este valor para que esté por encima del carrusel */
+        z-index: 3; /* por encima del carrusel */
         top: 100%;
-        margin-left: -83px;
+        margin-left: -123px;
         margin-top: 3px;
     }
 
@@ -285,11 +281,12 @@ footer .elemento:nth-child(8)::before {
     }
 
     footer .elemento:nth-child(8)::before {
-        content: "Duda";
+        content: "Nosotros";
     }
 
 
     footer{
+        font-size: 18px;
         padding: 20px;
         height: 50px;
         display: flex;
@@ -305,19 +302,23 @@ footer .elemento:nth-child(8)::before {
         display: block;
     }
 
-    
+
 
 }
 
 
 
 @media (min-width: 768px) and (max-width: 991px) {
+    nav {
+        margin-left: -20px;
+    }
+
     #logoheader {
         display: none;
     }
+
     #banertablet {
         display: block;
-        margin-bottom: 1px;
     }
 
     #contacto{
@@ -325,7 +326,7 @@ footer .elemento:nth-child(8)::before {
     }
 
     .icons{
-        margin-right: -50px;
+        margin-right: -30px;
     }
 
     #cliente{
@@ -370,10 +371,23 @@ footer .elemento:nth-child(8)::before {
         z-index: 3; /* por encima del carrusel */
     }
 
-    #carouselExample {
-        position: relative;
-        z-index: 1; 
+    footer .elemento:nth-child(1)::before {
+        display: none;
     }
-    
+
+    footer .elemento:nth-child(6)::before{
+        display: none;
+    }
 }
 
+
+@media (min-width: 1500px){
+    #logoheader {
+        display: none;
+    }
+
+    #banergrande {
+        display: block;
+    }
+
+}

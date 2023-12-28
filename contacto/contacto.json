@@ -1,0 +1,37 @@
+{
+    "secciones": [
+        {
+            "titulo": "Contacto",
+            "contenido": "En Wow Comics, estamos encantados de estar a tu disposición para cualquier consulta, pedido o simplemente para saludarte. No dudes en ponerte en contacto con nosotros de las siguientes maneras:",
+            "contenido2": "Dirección: Calle Florencia Número 2, Sevilla",
+            "contenido3": "Número de teléfono: 647829016",
+            "contenido4": "Whatsapp: 634957103",
+            "contenido5": "Correo Electrónico: wowcomics@gmail.com"
+        },
+        {
+            "titulo": "Redes Sociales",
+            "redes": [
+                {
+                    "nombre": "Instagram",
+                    "imagen": "/img/insta.png",
+                    "enlace": "https://www.instagram.com/wowcomics/"
+                },
+                {
+                    "nombre": "Facebook",
+                    "imagen": "/img/facebook.png",
+                    "enlace": "https://www.facebook.com/wowcomics/"
+                },
+                {
+                    "nombre": "Twitter",
+                    "imagen": "/img/x.png",
+                    "enlace": "https://twitter.com/wowcomics"
+                },
+                {
+                    "nombre": "TikTok",
+                    "imagen": "/img/tiktok.png",
+                    "enlace": "https://www.tiktok.com/wowcomics"
+                }
+            ]
+        }
+    ]
+}

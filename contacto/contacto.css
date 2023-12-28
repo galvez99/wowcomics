@@ -1,0 +1,87 @@
+#contenedor{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 40px;
+    margin-bottom: 80px;
+    margin-left: 200px;
+    margin-right: 200px;
+    background-color: #002b80;
+    border: 2px solid #002b80;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#contacto-container {
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+  }
+  
+  .contacto-section {
+    padding: 10px;
+    margin: 10px 0;
+  }
+  
+  .contacto-section h2 {
+    color: #fcf803; 
+  }
+  
+  .contacto-section h5 {
+    color: white; 
+  }
+
+  .red-social{
+    padding-right: 30px;
+  }
+  
+  .red-social {
+    transition: transform 0.5s;
+    -webkit-transition: transform 0.5s;
+    -moz-transition: transform 0.5s;
+    -ms-transition: transform 0.5s;
+    -o-transition: transform 0.5s;
+}
+
+  .red-social:hover {
+    transform: scale(1.2); 
+  }
+
+  @media (max-width: 767px) {
+    #contenedor{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .red-social{
+      padding-right: 5px;
+    }
+
+    .red-social img:hover{
+      transform: scale(1.2); 
+    }
+  }
+
+
+
+  @media (min-width: 768px) and (max-width: 991px) {
+    #contenedor{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-top: 40px;
+        margin-bottom: 80px;
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+  }
+
+  
