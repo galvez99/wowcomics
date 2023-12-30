@@ -1,0 +1,51 @@
+[
+    {
+      "title": "Marvel Deluxe. El Inmortal Hulk 1",
+      "imageSrc": "img/hulk1.png",
+      "altText": "Marvel Deluxe. El Inmortal Hulk 1",
+      "price":"39,90 €"
+    },
+    {
+      "title": "Marvel Saga. El Asombroso Spiderman 12: De Vuelta Al Negro",
+      "imageSrc": "img/sagaspd.jpg",
+      "altText": "Marvel Saga. El Asombroso Spiderman 12: De Vuelta Al Negro",
+      "price":"11,40 €"
+    },
+    {
+      "title": "Coleccionable Watchmen (Estuche)",
+      "imageSrc": "img/coleccionw.jpg",
+      "altText": "Coleccionable Watchmen (Estuche)",
+      "price":"99,95 €"
+    },
+    {
+      "title": "Marvel Must-Have. El Castigador: Círculo de sangre",
+      "imageSrc": "img/punisher2.gif",
+      "altText": "Marvel Must-Have. El Castigador: Círculo de sangre",
+      "price":"19 €"
+    },
+    {
+      "title": "Marvel Deluxe. El Inmortal Hulk 2",
+      "imageSrc": "img/hulk2.jpeg",
+      "altText": "Marvel Deluxe. El Inmortal Hulk 2",
+      "price":"34,20 €"
+    },
+    {
+      "title": "Marvel Now! Deluxe. Civil War II",
+      "imageSrc": "img/civil.png",
+      "altText": "Marvel Now! Deluxe. Civil War II",
+      "price":"26,60 €"
+    },
+    {
+      "title": "Marvel Now! Deluxe. Cuenta Atrás A Infinito",
+      "imageSrc": "img/infinito.png",
+      "altText": "Marvel Now! Deluxe. Cuenta Atrás A Infinito",
+      "price":"26,13 €"
+    },
+    {
+      "title": "Marvel Saga. El Asombroso Spiderman 12: De Vuelta Al Negro",
+      "imageSrc": "img/sagaspd.jpg",
+      "altText": "Marvel Saga. El Asombroso Spiderman 12: De Vuelta Al Negro",
+      "price":"11,40 €"
+    }
+  ]
+  

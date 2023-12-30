@@ -1,0 +1,190 @@
+#nuevos_lanzamientos{
+  color: #002b80;
+  text-align: center;
+  margin-top: 40px;
+}
+
+#bajan_precio{
+  color: #002b80;
+  text-align: center;
+  margin-top: 35px;
+}
+
+#mas_vendidos{
+  color: #002b80;
+  text-align: center;
+  margin-top: 35px;
+}
+
+.custom-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.custom-button button {
+  background-color: #002b80; 
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin-top: -5px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.custom-button button:hover{
+  color: #fcf803 ;
+}
+
+.bcarro{
+  height: 30px;
+  width: 30px;
+  margin-right: 8px;
+}
+
+.card-title{
+  text-align: center;
+  height: 50px;
+  margin-top: 10px;
+}
+
+.card-text{
+  text-align: center;
+}
+
+#carouselExampleControls3{
+  margin-bottom: 70px;
+}
+
+
+.carousel-inner {
+  padding: 1em;
+}
+
+.card {
+  margin: 0 0.7em;
+  box-shadow: 7px 8px 9px -5px rgba(0,43,128,0.32);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: #e1e1e1;
+  width: 6vh;
+  height: 6vh;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+
+
+
+
+
+#carousel-container {
+    width: 100vw; 
+    overflow: hidden;
+    position: relative;
+  }
+
+  #carousel-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .carousel-objeto {
+    width: 100vw; 
+    box-sizing: border-box;
+    flex: 0 0 100%; 
+  }
+
+  .carousel-objeto img {
+    width: 99.01%; 
+    height: auto; 
+  }
+
+  #prev, #next {
+    cursor: pointer;
+    position: absolute;
+    margin-top: -230px;
+    font-size: 80px; 
+    color: #F5F5F5;
+  }
+
+  #prev:hover{
+    color: #E1E1E1;
+    opacity: 1;
+  }
+
+  #next:hover{
+    color: #E1E1E1;
+    opacity: 1;
+  }
+
+  #prev {
+    opacity: .6;
+    left: 20px;
+  }
+
+  #next {
+    opacity: .6;
+    right: 20px;
+  }
+
+  @media (min-width: 768px) {
+    .carousel-item {
+      margin-right: 0;
+      flex: 0 0 25.10%;
+      display: block;
+    }
+    .carousel-inner {
+      display: flex;
+    }
+  }
+  .card .img-wrapper {
+      max-width: 100%;
+      height: 250px;
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+  .card img {
+      max-height: 100%;
+    }
+
+  @media (max-width: 767px) {
+    .card .img-wrapper {
+      height: 14em;
+    }
+
+    .card-title{
+      margin-top: 5px;
+    }
+
+    #nuevos_lanzamientos{
+      margin-bottom: 0px;
+      margin-top: 20px;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 991px) {
+    .card-title{
+      height: 120px;
+      margin-top: 5px;
+    }
+
+    .card .img-wrapper {
+      margin-top: 0px;
+    }
+
+    .card{
+      margin-left: 7px;
+      margin-right: 10px;
+    }
+    
+  }

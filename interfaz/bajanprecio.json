@@ -1,0 +1,115 @@
+[
+    {
+        "titulo1": "Coleccionable Watchmen núm. 02",
+        "imagenSrc1": "img/watchmen2.jpeg",
+        "altText01": "Coleccionable Watchmen núm. 02",
+        "precioOriginal1":"9,95",
+        "precio1":"8,45 €"
+    },
+    {
+        "titulo1": "MOTORISTA FANTASMA CÓSMICO 01: DOBLE IDENTIDAD",
+        "imagenSrc1": "img/ghostrider.png",
+        "altText01": "MOTORISTA FANTASMA CÓSMICO 01: DOBLE IDENTIDAD",
+        "precioOriginal1":"21,45",
+        "precio1":"19,95 €"
+    },
+    {
+        "titulo1": "Marvel Deluxe. Asedio",
+        "imagenSrc1": "img/asedio.jpg",
+        "altText01": "Marvel Deluxe. Asedio",
+        "precioOriginal1":"18,95",
+        "precio1":"18,00 €"
+    },
+    {
+        "titulo1": "Batman: Caballero maldito. DC Black Label",
+        "imagenSrc1": "img/caballeromaldito.jpg",
+        "altText01": "Batman: Caballero maldito. DC Black Label",
+        "precioOriginal1":"25,95",
+        "precio1":"23,50 €"
+    },
+    {
+        "titulo1": "Marvel Deluxe. Thor 5",
+        "imagenSrc1": "img/thor.jpg",
+        "altText01": "Marvel Deluxe. Thor 5",
+        "precioOriginal1":"19,95",
+        "precio1":"18 €"
+    },
+    {
+        "titulo1": "Predicador núm. 9: Álamo",
+        "imagenSrc1": "img/predicador9.jpg",
+        "altText01": "Predicador núm. 9: Álamo",
+        "precioOriginal1":"19,95",
+        "precio1":"17.95 €"
+    },
+    {
+        "titulo1": "Hellblazer vol. 01",
+        "imagenSrc1": "img/hellblazer.jpg ",
+        "altText01": "Hellblazer vol. 01",
+        "precioOriginal1":"36",
+        "precio1":"34 €"
+    },
+    {
+        "titulo1": "Marvel Must-Have. Aniquilación",
+        "imagenSrc1": "img/aniquilacion.png",
+        "altText01": "Marvel Must-Have. Aniquilación",
+        "precioOriginal1":"18",
+        "precio1":"14,45 €"
+    },
+    {
+        "title": "Coleccionable Watchmen núm. 02",
+        "imageSrc": "img/watchmen2.jpeg",
+        "altText": "Coleccionable Watchmen núm. 02",
+        "price": "8,45 €",
+        "publisher": "Vertigo"
+      },
+      {
+        "title": "MOTORISTA FANTASMA CÓSMICO 01: DOBLE IDENTIDAD",
+        "imageSrc": "img/ghostrider.png",
+        "altText": "MOTORISTA FANTASMA CÓSMICO 01: DOBLE IDENTIDAD",
+        "price": "19,95 €",
+        "publisher": "Marvel"
+      },
+      {
+        "title": "Marvel Deluxe. Asedio",
+        "imageSrc": "img/asedio.jpg",
+        "altText": "Marvel Deluxe. Asedio",
+        "price": "18,00 €",
+        "publisher": "Marvel"
+      },
+      {
+        "title": "Batman: Caballero maldito. DC Black Label",
+        "imageSrc": "img/caballeromaldito.jpg",
+        "altText": "Batman: Caballero maldito. DC Black Label",
+        "price": "23,50 €",
+        "publisher": "DC"
+      },
+      {
+        "title": "Marvel Deluxe. Thor 5",
+        "imageSrc": "img/thor.jpg",
+        "altText": "Marvel Deluxe. Thor 5",
+        "price": "18 €",
+        "publisher": "Marvel"
+      },
+      {
+        "title": "Predicador núm. 9: Álamo",
+        "imageSrc": "img/predicador9.jpg",
+        "altText": "Predicador núm. 9: Álamo",
+        "price": "17.95 €",
+        "publisher": "Vertigo"
+      },
+      {
+        "title": "Hellblazer vol. 01",
+        "imageSrc": "img/hellblazer.jpg",
+        "altText": "Hellblazer vol. 01",
+        "price": "34 €",
+        "publisher": "Vertigo"
+      },
+      {
+        "title": "Marvel Must-Have. Aniquilación",
+        "imageSrc": "img/aniquilacion.png",
+        "altText": "Marvel Must-Have. Aniquilación",
+        "price": "14,45 €",
+        "publisher": "Marvel"
+      }
+  ]
+  

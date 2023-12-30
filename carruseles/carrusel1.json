@@ -1,0 +1,8 @@
+{
+    "images": [
+        {"src": "img/banerdc.png"},
+        {"src": "img/banermarvel.png"},
+        {"src": "img/banervetigo.png"},
+        {"src": "img/starwarsbaner.png"}
+    ]
+}

@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="css/interfaz.css">
-    <link rel="stylesheet" type="text/css" href="css/general.css">
+    <link rel="stylesheet" type="text/css" href="/interfaz/interfaz.css">
+    <link rel="stylesheet" type="text/css" href="/css/general.css">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="/js/carousel.js" defer></script>
+    <script src="/interfaz/masnuevos.js" defer></script>
+    <script src="/interfaz/bajanprecio.js" defer></script>
+    <script src="/interfaz/masvendidos.js" defer></script>
+    <script src="/interfaz/carousel.js" defer></script>
     <script type="text/javascript" src="/js/index.js"></script>
     <link rel="website icon" type="png" href="img/thanos.PNG">
     <title>WoW Comics</title>
@@ -32,9 +35,9 @@
                 <img id="logomovil" src="img/thanos.PNG" alt="foto logo movil">
             </a>
             <div class="dropdown">
-                <a id="merch" href="comics.html">Comics</a>
+                <a id="merch" href="comics/comics.html">Comics</a>
                 <div id="drop1" class="dropdown-content">
-                    <a href="#">Ver todos</a>
+                    <a href="comics/comics.html">Ver todos</a>
                     <a href="#">Marvel</a>
                     <a href="#">DC</a>
                     <a href="#">Vertigo</a>
@@ -42,7 +45,7 @@
                 </div>
             </div>
             <div  class="dropdown">
-                <a href="merch.html">Merchandising</a>
+                <a href="merch/merch.html">Merchandising</a>
                 <div id="drop2" class="dropdown-content">
                     <a href="#">Ver todo</a>
                     <a href="#">Figuras</a>
@@ -51,7 +54,7 @@
                 </div>
             </div>
             <div class="dropdown">
-                <a href="novedades.html">Novedades</a>
+                <a href="novedades/novedades.html">Novedades</a>
                 <div id="drop3" class="dropdown-content">
                     <a href="#">Próximos lanzamientos</a>
                     <a href="#">Rebajados</a>
@@ -64,9 +67,9 @@
         <div class="dropdown" id="mobile-dropdown">
             <div class="menu-icon">☰</div>
             <div class="dropdown-content-mobile">
-                <a href="hola.html">Comics</a>
-                <a href="#">Merchandising</a>
-                <a href="#">Novedades</a>
+                <a href="comics/comics.html">Comics</a>
+                <a href="merch/merch.html">Merchandising</a>
+                <a href="novedades/novedades.html">Novedades</a>
             </div>
         </div>
 
@@ -87,177 +90,69 @@
 
    
     <div id="carousel-container">
-        <div id="carousel-wrapper">
-        <div class="carousel-objeto"><img src="img/banerdc.png"  alt="..."></div>
-        <div class="carousel-objeto"><img src="img/banermarvel.png"  alt="..."></div>
-        <div class="carousel-objeto"><img src="img/banervetigo.png"  alt="..."></div>
-        <div class="carousel-objeto"><img src="img/starwarsbaner.png"  alt="..."></div>
-        </div>
+      <div id="carousel-wrapper"></div>
     </div>
-    
-    <div id="prev">&lt;</div>
-    <div id="next">&gt;</div>
+  
+    <div id="buttons-container">
+        <div id="prev">&lt;</div>
+        <div id="next">&gt;</div>
+    </div>
         
-      <script>
-        const carouselWrapper = document.getElementById('carousel-wrapper');
-        const prevButton = document.getElementById('prev');
-        const nextButton = document.getElementById('next');
-        let currentIndex = 0;
-      
-        function showSlide(index) {
-          const offset = -index * window.innerWidth; // Ancho de la ventana
-          carouselWrapper.style.transform = `translateX(${offset}px)`;
-        }
-      
-        function prevSlide() {
-          currentIndex = (currentIndex - 1 + 4) % 4;
-          showSlide(currentIndex);
-        }
-      
-        function nextSlide() {
-          currentIndex = (currentIndex + 1) % 4;
-          showSlide(currentIndex);
-        }
-      
-        prevButton.addEventListener('click', prevSlide);
-        nextButton.addEventListener('click', nextSlide);
-      
-        setInterval(nextSlide, 5000);
-      </script>
+    <script>
+      $(document).ready(function () {
+          const carouselWrapper = $('#carousel-wrapper');
+          const prevButton = $('#prev');
+          const nextButton = $('#next');
+          let currentIndex = 0;
+
+          $.ajax({
+              url: '/carruseles/carrusel1.json',
+              dataType: 'json',
+              success: function (data) {
+                  $.each(data.images, function (index, image) {
+                      carouselWrapper.append('<div class="carousel-objeto"><img src="' + image.src + '" alt="..."></div>');
+                  });
+
+                  showSlide(currentIndex);
+              }
+          });
+
+          function showSlide(index) {
+              const offset = -index * window.innerWidth;
+              carouselWrapper.css('transform', 'translateX(' + offset + 'px)');
+          }
+
+          function prevSlide() {
+              currentIndex = (currentIndex - 1 + 4) % 4;
+              showSlide(currentIndex);
+          }
+
+          function nextSlide() {
+              currentIndex = (currentIndex + 1) % 4;
+              showSlide(currentIndex);
+          }
+
+          prevButton.on('click', prevSlide);
+          nextButton.on('click', nextSlide);
+
+          setInterval(nextSlide, 5000);
+      });
+    </script>
       
 
 
     <h1 id="nuevos_lanzamientos">Nuevos Lanzamientos</h1>
     <div id="carouselExampleControls" class="carousel">
         <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="card">
-                    <div class="img-wrapper"><img src="img/hulk1.png" alt="Marvel Deluxe. El Inmortal Hulk 1"> </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Marvel Deluxe. El Inmortal Hulk 1. La Puerta Verde</h5>
-                        <h5 class="card-text">39,90 €</h5>
-                        <div class="custom-button">
-                            <button onclick="addToCart()">
-                                <img class="bcarro" src="img/carrito.png" alt="Carrito de compras">
-                                Añadir
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="card">
-                    <div class="img-wrapper"><img src="img/sagaspd.jpg"  alt="Marvel Saga. El Asombroso Spiderman 12: De Vuelta Al Negro"> </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Marvel Saga. El Asombroso Spiderman 12: De Vuelta Al Negro</h5>
-                        <h5 class="card-text">11,40 €</h5>
-                        <div class="custom-button">
-                            <button onclick="addToCart()">
-                                <img class="bcarro" src="img/carrito.png" alt="Carrito de compras">
-                                Añadir
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="card">
-                    <div class="img-wrapper"><img src="img/coleccionw.jpg"  alt="Coleccionable Watchmen (Estuche)"> </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Coleccionable Watchmen (Estuche)</h5>
-                        <h5 class="card-text">99,95 €</h5>
-                        <div class="custom-button">
-                            <button onclick="addToCart()">
-                                <img class="bcarro" src="img/carrito.png" alt="Carrito de compras">
-                                Añadir
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="card">
-                    <div class="img-wrapper"><img src="img/punisher2.gif" alt="Marvel Must-Have. El Castigador: Círculo de sangre"> </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Marvel Must-Have. El Castigador: Círculo de sangre</h5>
-                        <h5 class="card-text">19 €</h5>
-                        <div class="custom-button">
-                            <button onclick="addToCart()">
-                                <img class="bcarro" src="img/carrito.png" alt="Carrito de compras">
-                                Añadir
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="card">
-                    <div class="img-wrapper"><img src="img/hulk2.jpeg"  alt="Marvel Deluxe. El Inmortal Hulk 2"> </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Marvel Deluxe. El Inmortal Hulk 2</h5>
-                        <h5 class="card-text">34,20 €</h5>
-                        <div class="custom-button">
-                            <button onclick="addToCart()">
-                                <img class="bcarro" src="img/carrito.png" alt="Carrito de compras">
-                                Añadir
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="card">
-                    <div class="img-wrapper"><img src="img/civil.png" alt="Marvel Now! Deluxe. Los Vengadores de Mark Waid 2. Civil War II"> </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Marvel Now! Deluxe. Los Vengadores. Civil War II</h5>
-                        <h5 class="card-text">26,60 €</h5>
-                        <div class="custom-button">
-                            <button onclick="addToCart()">
-                                <img class="bcarro" src="img/carrito.png" alt="Carrito de compras">
-                                Añadir
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="card">
-                    <div class="img-wrapper"><img src="img/infinito.png"  alt="Marvel Now! Deluxe. Cuenta Atrás A Infinito"> </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Marvel Now! Deluxe. Cuenta Atrás A Infinito</h5>
-                        <h5 class="card-text">26,13 €</h5>
-                        <div class="custom-button">
-                            <button onclick="addToCart()">
-                                <img class="bcarro" src="img/carrito.png" alt="Carrito de compras">
-                                Añadir
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="card">
-                    <div class="img-wrapper"><img src="img/sagaspd.jpg"  alt="Marvel Saga. El Asombroso Spiderman 12: De Vuelta Al Negro"> </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Marvel Saga. El Asombroso Spiderman 12: De Vuelta Al Negro</h5>
-                        <h5 class="card-text">11,40 €</h5>
-                        <div class="custom-button">
-                            <button onclick="addToCart()">
-                                <img class="bcarro" src="img/carrito.png" alt="Carrito de compras">
-                                Añadir
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          <!-- Carousel items will be dynamically added here -->
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
         </button>
     </div>
 
@@ -266,273 +161,34 @@
 
     <div id="carouselExampleControls2" class="carousel">
         <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="card">
-                    <div class="img-wrapper"><img src="img/watchmen2.jpeg" alt="Coleccionable Watchmen núm. 02"> </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Coleccionable Watchmen núm. 02</h5>
-                        <h5 class="card-text"><del style="color: gray;">9,95</del> &nbsp;8,45 €</h5>
-                        <div class="custom-button">
-                            <button onclick="addToCart()">
-                                <img class="bcarro" src="img/carrito.png" alt="Carrito de compras">
-                                Añadir
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="card">
-                    <div class="img-wrapper"><img src="img/ghostrider.png"  alt="MOTORISTA FANTASMA CÓSMICO 01: DOBLE IDENTIDAD"> </div>
-                    <div class="card-body">
-                        <h5 class="card-title">MOTORISTA FANTASMA CÓSMICO 01: DOBLE IDENTIDAD</h5>
-                        <h5 class="card-text"><del style="color: gray;">21,45</del> &nbsp;19,95 €</h5>
-                        <div class="custom-button">
-                            <button onclick="addToCart()">
-                                <img class="bcarro" src="img/carrito.png" alt="Carrito de compras">
-                                Añadir
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="card">
-                    <div class="img-wrapper"><img src="img/asedio.jpg"  alt="Marvel Deluxe. Asedio"> </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Marvel Deluxe. Asedio</h5>
-                        <h5 class="card-text"><del style="color: gray;">18,95</del> &nbsp;18,00 €</h5>
-                        <div class="custom-button">
-                            <button onclick="addToCart()">
-                                <img class="bcarro" src="img/carrito.png" alt="Carrito de compras">
-                                Añadir
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="card">
-                    <div class="img-wrapper"><img src="img/caballeromaldito.jpg" alt="Batman: Caballero maldito. DC Black Label"> </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Batman: Caballero maldito. DC Black Label</h5>
-                        <h5 class="card-text"><del style="color: gray;">25,95</del> &nbsp;23,50 €</h5>
-                        <div class="custom-button">
-                            <button onclick="addToCart()">
-                                <img class="bcarro" src="img/carrito.png" alt="Carrito de compras">
-                                Añadir
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="card">
-                    <div class="img-wrapper"><img src="img/thor.jpg"  alt="Marvel Deluxe. Thor 5"> </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Marvel Deluxe. Thor 5</h5>
-                        <h5 class="card-text"><del style="color: gray;">19,95</del> &nbsp;18 €</h5>
-                        <div class="custom-button">
-                            <button onclick="addToCart()">
-                                <img class="bcarro" src="img/carrito.png" alt="Carrito de compras">
-                                Añadir
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="card">
-                    <div class="img-wrapper"><img src="img/predicador9.jpg" alt="Predicador núm. 9: Álamo"> </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Predicador núm. 9: Álamo</h5>
-                        <h5 class="card-text"><del style="color: gray;">19,95</del> &nbsp;17.95 €</h5>
-                        <div class="custom-button">
-                            <button onclick="addToCart()">
-                                <img class="bcarro" src="img/carrito.png" alt="Carrito de compras">
-                                Añadir
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="card">
-                    <div class="img-wrapper"><img src="img/hellblazer.jpg"  alt="Hellblazer vol. 01"> </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Hellblazer vol. 01</h5>
-                        <h5 class="card-text"><del style="color: gray;">36</del> &nbsp;34 €</h5>
-                        <div class="custom-button">
-                            <button onclick="addToCart()">
-                                <img class="bcarro" src="img/carrito.png" alt="Carrito de compras">
-                                Añadir
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="card">
-                    <div class="img-wrapper"><img src="img/aniquilacion.png"  alt="Marvel Must-Have. Aniquilación"> </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Marvel Must-Have. Aniquilación</h5>
-                        <h5 class="card-text"><del style="color: gray;">18</del> &nbsp;14,45 €</h5>
-                        <div class="custom-button">
-                            <button onclick="addToCart()">
-                                <img class="bcarro" src="img/carrito.png" alt="Carrito de compras">
-                                Añadir
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          <!-- Carousel items will be dynamically added here -->
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls2" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls2" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
         </button>
-    </div>
+      </div>
 
 
     <h1 id="mas_vendidos">Los más vendidos</h1>
 
     <div id="carouselExampleControls3" class="carousel">
         <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="card">
-                    <div class="img-wrapper"><img src="img/civilwar.jpg" alt="Marvel Must-Have. Civil War"> </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Marvel Must-Have. Civil War</h5>
-                        <h5 class="card-text">17,10 €</h5>
-                        <div class="custom-button">
-                            <button onclick="addToCart()">
-                                <img class="bcarro" src="img/carrito.png" alt="Carrito de compras">
-                                Añadir
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="card">
-                    <div class="img-wrapper"><img src="img/kraven.jpg"  alt="Marvel Must-Have. Spiderman: La última cacería de Kraven"> </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Marvel Must-Have. Spiderman: La última cacería de Kraven</h5>
-                        <h5 class="card-text">17,10 €</h5>
-                        <div class="custom-button">
-                            <button onclick="addToCart()">
-                                <img class="bcarro" src="img/carrito.png" alt="Carrito de compras">
-                                Añadir
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="card">
-                    <div class="img-wrapper"><img src="img/broma.jpg"  alt="Batman: La broma asesina. Black Label"> </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Batman: La broma asesina. Black Label</h5>
-                        <h5 class="card-text">12,95 €</h5>
-                        <div class="custom-button">
-                            <button onclick="addToCart()">
-                                <img class="bcarro" src="img/carrito.png" alt="Carrito de compras">
-                                Añadir
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="card">
-                    <div class="img-wrapper"><img src="img/halloween.jpeg" alt="Batman: El largo Halloween. Black Label"> </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Batman: El largo Halloween. Black Label</h5>
-                        <h5 class="card-text">40 €</h5>
-                        <div class="custom-button">
-                            <button onclick="addToCart()">
-                                <img class="bcarro" src="img/carrito.png" alt="Carrito de compras">
-                                Añadir
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="card">
-                    <div class="img-wrapper"><img src="img/planetahu8lk.jpeg"  alt="Marvel Must-Have. Planeta Hulk"> </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Marvel Must-Have. Planeta Hulk</h5>
-                        <h5 class="card-text">22,80 €</h5>
-                        <div class="custom-button">
-                            <button onclick="addToCart()">
-                                <img class="bcarro" src="img/carrito.png" alt="Carrito de compras">
-                                Añadir
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="card">
-                    <div class="img-wrapper"><img src="img/punisher.jpg" alt="Marvel Must-Have. El Castigador: Bienvenido, Frank"> </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Marvel Must-Have. El Castigador: Bienvenido, Frank</h5>
-                        <h5 class="card-text">17,10 €</h5>
-                        <div class="custom-button">
-                            <button onclick="addToCart()">
-                                <img class="bcarro" src="img/carrito.png" alt="Carrito de compras">
-                                Añadir
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="card">
-                    <div class="img-wrapper"><img src="img/secret.jpg"  alt="Marvel Must-Have. Secret Wars: Guerras Secretas"> </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Marvel Must-Have. Secret Wars: Guerras Secretas</h5>
-                        <h5 class="card-text">30,40 €</h5>
-                        <div class="custom-button">
-                            <button onclick="addToCart()">
-                                <img class="bcarro" src="img/carrito.png" alt="Carrito de compras">
-                                Añadir
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="card">
-                    <div class="img-wrapper"><img src="img/watchmen1.jpg"  alt="Coleccionable Watchmen núm. 01"> </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Coleccionable Watchmen núm. 01</h5>
-                        <h5 class="card-text">5,65 €</h5>
-                        <div class="custom-button">
-                            <button onclick="addToCart()">
-                                <img class="bcarro" src="img/carrito.png" alt="Carrito de compras">
-                                Añadir
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          <!-- Carousel items will be dynamically added here -->
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls3" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls3" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
         </button>
-    </div>
-
+      </div>
 
     <footer>
         <a class="elemento" href="avisolegal/avisolegal.html"> Aviso legal </a>

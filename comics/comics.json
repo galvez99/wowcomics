@@ -1,0 +1,341 @@
+{
+    "comics": [
+      {
+        "title": "Marvel Deluxe. El Inmortal Hulk 1",
+        "imageSrc": "/img/hulk1.png",
+        "altText": "Marvel Deluxe. El Inmortal Hulk 1",
+        "price": "39,90 €",
+        "publisher": "Marvel"
+      },
+      {
+        "title": "Marvel Saga. El Asombroso Spiderman 12: De Vuelta Al Negro",
+        "imageSrc": "/img/sagaspd.jpg",
+        "altText": "Marvel Saga. El Asombroso Spiderman 12: De Vuelta Al Negro",
+        "price": "11,40 €",
+        "publisher": "Marvel"
+      },
+      {
+        "title": "Coleccionable Watchmen (Estuche)",
+        "imageSrc": "/img/coleccionw.jpg",
+        "altText": "Coleccionable Watchmen (Estuche)",
+        "price": "99,95 €",
+        "publisher": "Vertigo"
+      },
+      {
+        "title": "Marvel Must-Have. El Castigador: Círculo de sangre",
+        "imageSrc": "/img/punisher2.gif",
+        "altText": "Marvel Must-Have. El Castigador: Círculo de sangre",
+        "price": "19 €",
+        "publisher": "Marvel"
+      },
+      {
+        "title": "Marvel Deluxe. El Inmortal Hulk 2",
+        "imageSrc": "/img/hulk2.jpeg",
+        "altText": "Marvel Deluxe. El Inmortal Hulk 2",
+        "price": "34,20 €",
+        "publisher": "Marvel"
+      },
+      {
+        "title": "Marvel Now! Deluxe. Civil War II",
+        "imageSrc": "/img/civil.png",
+        "altText": "Marvel Now! Deluxe. Civil War II",
+        "price": "26,60 €",
+        "publisher": "Marvel"
+      },
+      {
+        "title": "Marvel Now! Deluxe. Cuenta Atrás A Infinito",
+        "imageSrc": "/img/infinito.png",
+        "altText": "Marvel Now! Deluxe. Cuenta Atrás A Infinito",
+        "price": "26,13 €",
+        "publisher": "Marvel"
+      },
+      {
+        "title": "Marvel Saga. El Asombroso Spiderman 12: De Vuelta Al Negro",
+        "imageSrc": "/img/sagaspd.jpg",
+        "altText": "Marvel Saga. El Asombroso Spiderman 12: De Vuelta Al Negro",
+        "price": "11,40 €",
+        "publisher": "Marvel"
+      },
+      {
+      "title": "Coleccionable Watchmen núm. 02",
+      "imageSrc": "/img/watchmen2.jpeg",
+      "altText": "Coleccionable Watchmen núm. 02",
+      "price": "8,45 €",
+      "publisher": "Vertigo"
+    },
+    {
+      "title": "MOTORISTA FANTASMA CÓSMICO 01: DOBLE IDENTIDAD",
+      "imageSrc": "/img/ghostrider.png",
+      "altText": "MOTORISTA FANTASMA CÓSMICO 01: DOBLE IDENTIDAD",
+      "price": "19,95 €",
+      "publisher": "Marvel"
+    },
+    {
+      "title": "Marvel Deluxe. Asedio",
+      "imageSrc": "/img/asedio.jpg",
+      "altText": "Marvel Deluxe. Asedio",
+      "price": "18,00 €",
+      "publisher": "Marvel"
+    },
+    {
+      "title": "Batman: Caballero maldito. DC Black Label",
+      "imageSrc": "/img/caballeromaldito.jpg",
+      "altText": "Batman: Caballero maldito. DC Black Label",
+      "price": "23,50 €",
+      "publisher": "DC"
+    },
+    {
+      "title": "Marvel Deluxe. Thor 5",
+      "imageSrc": "/img/thor.jpg",
+      "altText": "Marvel Deluxe. Thor 5",
+      "price": "18 €",
+      "publisher": "Marvel"
+    },
+    {
+      "title": "Predicador núm. 9: Álamo",
+      "imageSrc": "/img/predicador9.jpg",
+      "altText": "Predicador núm. 9: Álamo",
+      "price": "17.95 €",
+      "publisher": "Vertigo"
+    },
+    {
+      "title": "Hellblazer vol. 01",
+      "imageSrc": "/img/hellblazer.jpg",
+      "altText": "Hellblazer vol. 01",
+      "price": "34 €",
+      "publisher": "Vertigo"
+    },
+    {
+      "title": "Marvel Must-Have. Aniquilación",
+      "imageSrc": "/img/aniquilacion.png",
+      "altText": "Marvel Must-Have. Aniquilación",
+      "price": "14,45 €",
+      "publisher": "Marvel"
+    },
+    {
+      "title": "Marvel Must-Have. Civil War",
+      "imageSrc": "/img/civilwar.jpg",
+      "altText": "Marvel Must-Have. Civil War",
+      "price": "17,10 €",
+      "publisher": "Marvel"
+    },
+    {
+      "title": "Marvel Must-Have. Spiderman: La última cacería de Kraven",
+      "imageSrc": "/img/kraven.jpg",
+      "altText": "Marvel Must-Have. Spiderman: La última cacería de Kraven",
+      "price": "17,10 €",
+      "publisher": "Marvel"
+    },
+    {
+      "title": "Batman: La broma asesina. Black Label",
+      "imageSrc": "/img/broma.jpg",
+      "altText": "Batman: La broma asesina. Black Label",
+      "price": "12,95 €",
+      "publisher": "DC"
+    },
+    {
+      "title": "Batman: El largo Halloween. Black Label",
+      "imageSrc": "/img/halloween.jpeg",
+      "altText": "Batman: El largo Halloween. Black Label",
+      "price": "40 €",
+      "publisher": "DC"
+    },
+    {
+      "title": "Marvel Must-Have. Planeta Hulk",
+      "imageSrc": "/img/planetahu8lk.jpeg",
+      "altText": "Marvel Must-Have. Planeta Hulk",
+      "price": "22,80 €",
+      "publisher": "Marvel"
+    },
+    {
+      "title": "Marvel Must-Have. El Castigador: Bienvenido, Frank",
+      "imageSrc": "/img/punisher.jpg",
+      "altText": "Marvel Must-Have. El Castigador: Bienvenido, Frank",
+      "price": "17,10 €",
+      "publisher": "Marvel"
+    },
+    {
+      "title": "Marvel Must-Have. Secret Wars: Guerras Secretas",
+      "imageSrc": "/img/secret.jpg",
+      "altText": "Marvel Must-Have. Secret Wars: Guerras Secretas",
+      "price": "230,40 €",
+      "publisher": "Marvel"
+    },
+    {
+      "title": "Coleccionable Watchmen núm. 01",
+      "imageSrc": "/img/watchmen1.jpg",
+      "altText": "Coleccionable Watchmen núm. 01",
+      "price": "5,65 €",
+      "publisher": "Vertigo"
+    },
+    {
+      "title": "Marvel Must Have. La Patrulla-X 1",
+      "imageSrc": "/img/xmen1.jpg",
+      "altText": "Marvel Must Have. La Patrulla-X 1",
+      "price": "23,75 €",
+      "publisher": "Marvel"
+    },
+    {
+      "title": "Marvel Must-Have. Vengadores Oscuros 1",
+      "imageSrc": "/img/vengadoresoscuros1.jpg",
+      "altText": "Marvel Must-Have. Vengadores Oscuros 1",
+      "price": "19,00 €",
+      "publisher": "Marvel"
+    },
+    {
+      "title": "Marvel Must-Have. Vengadores Oscuros 2",
+      "imageSrc": "/img/vengadoresoscuros2.jpg",
+      "altText": "Marvel Must-Have. Vengadores Oscuros 2",
+      "price": "19,00 €",
+      "publisher": "Marvel"
+    },
+    {
+      "title": "Marvel Must-Have. Vengadores Oscuros 3",
+      "imageSrc": "/img/vengadoresoscuros3.jpg",
+      "altText": "Marvel Must-Have. Vengadores Oscuros 3",
+      "price": "19,00 €",
+      "publisher": "Marvel"
+    },
+    {
+      "title": "Marvel Deluxe. Tony Stark: Iron Man 1",
+      "imageSrc": "/img/iron1.jpeg",
+      "altText": "Marvel Deluxe. Tony Stark: Iron Man 1",
+      "price": "39,90 €",
+      "publisher": "Marvel"
+    },
+    {
+      "title": "Marvel Deluxe. Capitán América de Ta-Nehisi Coates 1",
+      "imageSrc": "/img/capi1.jpg",
+      "altText": "Marvel Deluxe. Capitán América de Ta-Nehisi Coates 1",
+      "price": "41,80 €",
+      "publisher": "Marvel"
+    },
+    {
+      "title": "Hellblazer: Hábitos peligrosos (DC Pocket)",
+      "imageSrc": "/img/hellblazer1.jpg",
+      "altText": "Hellblazer: Hábitos peligrosos (DC Pocket)",
+      "price": "9.95 €",
+      "publisher": "Vertigo"
+    },
+    {
+      "title": "V de Vendetta (DC Pocket)",
+      "imageSrc": "/img/vdevendetta.jpg",
+      "altText": "V de Vendetta (DC Pocket)",
+      "price": "9.95 €",
+      "publisher": "Vertigo"
+    },
+    {
+      "title": "Batman: Tres Jokers (Edición Deluxe)",
+      "imageSrc": "/img/3jokers.jpg",
+      "altText": "Batman: Tres Jokers (Edición Deluxe)",
+      "price": "38.50 €",
+      "publisher": "DC"
+    },
+    {
+      "title": "Watchmen - La saga completa",
+      "imageSrc": "/img/watchmen3.jpeg",
+      "altText": "Watchmen - La saga completa",
+      "price": "100 €",
+      "publisher": "Vertigo"
+    },
+    {
+      "title": "Marvel Must-Have. Los Poderosos Vengadores 1",
+      "imageSrc": "/img/poderososvengadores.png",
+      "altText": "Marvel Must-Have. Los Poderosos Vengadores 1",
+      "price": "17,10 €",
+      "publisher": "Marvel"
+    },
+    {
+      "title": "Marvel Must-Have. Los Poderosos Vengadores 2",
+      "imageSrc": "/img/poderososvengadores2.jpg",
+      "altText": "Marvel Must-Have. Los Poderosos Vengadores 2",
+      "price": "17,10 €",
+      "publisher": "Marvel"
+    },
+    {
+      "title": "Marvel Must Have. Los Poderosos Vengadores 3",
+      "imageSrc": "/img/poderososvengadores3.jpg",
+      "altText": "Marvel Must Have. Los Poderosos Vengadores 3",
+      "price": "17,10 €",
+      "publisher": "Marvel"
+    },
+    {
+      "title": "Star Wars Darth Vader Tomo 1",
+      "imageSrc": "/img/comicstarwars1.png",
+      "altText": "Star Wars Darth Vader Tomo 1",
+      "price": "16,10 €",
+      "publisher": "Otros"
+    },
+    {
+      "title": "Star Wars Darth Vader Tomo 2",
+      "imageSrc": "/img/comicstarwars2.png",
+      "altText": "Star Wars Darth Vader Tomo 2",
+      "price": "16,10 €",
+      "publisher": "Otros"
+    },
+    {
+      "title": "Star Wars Darth Vader Tomo 3",
+      "imageSrc": "/img/comicstarwars3.png",
+      "altText": "Star Wars Darth Vader Tomo 3",
+      "price": "16,10 €",
+      "publisher": "Otros"
+    },
+    {
+      "title": "El cambio climático (Súper Humor Mortadelo 67)",
+      "imageSrc": "/img/mortadelo.jpg",
+      "altText": "El cambio climático (Súper Humor Mortadelo 67)",
+      "price": "18,90 €",
+      "publisher": "Otros"
+    },
+    {
+      "title": "El 60º aniversario (Súper Humor Mortadelo 63)",
+      "imageSrc": "/img/mortadelo2.png",
+      "altText": "El 60º aniversario (Súper Humor Mortadelo 63)",
+      "price": "18,90 €",
+      "publisher": "Otros"
+    },
+    {
+      "title": "Comic SUPER HUMOR SIMPSON num: 9",
+      "imageSrc": "/img/simpson.jpg",
+      "altText": "Comic SUPER HUMOR SIMPSON num: 9",
+      "price": "12,95 €",
+      "publisher": "Otros"
+    },
+    {
+      "title": "Comic SUPER HUMOR SIMPSON num: 4",
+      "imageSrc": "/img/simpson2.jpg",
+      "altText": "Comic SUPER HUMOR SIMPSON num: 4",
+      "price": "12,95 €",
+      "publisher": "Otros"
+    },
+    {
+      "title": "Coleccionable Injustice (Estuche)",
+      "imageSrc": "/img/injustice.jpg",
+      "altText": "Coleccionable Injustice (Estuche)",
+      "price": "99,95 €",
+      "publisher": "DC"
+    },
+    {
+      "title": "Marvel Omnibus. Marvel Zomnibus",
+      "imageSrc": "/img/zombi.jpg",
+      "altText": "Marvel Omnibus. Marvel Zomnibus",
+      "price": "76 €",
+      "publisher": "Marvel"
+    },
+    {
+      "title": "Marvel Omnibus. Los Nuevos Vengadores 1",
+      "imageSrc": "/img/nuevosvengadores.jpg",
+      "altText": "Marvel Omnibus. Los Nuevos Vengadores 1",
+      "price": "52,25 €",
+      "publisher": "Marvel"
+    },
+    {
+      "title": "Marvel Omnibus. Dinastía de M",
+      "imageSrc": "/img/disnastiam.jpg",
+      "altText": "Marvel Omnibus. Dinastía de M",
+      "price": "62,70 €",
+      "publisher": "Marvel"
+    }
+    ]
+  }
+  

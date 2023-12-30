@@ -1,0 +1,38 @@
+{
+    "secciones": [
+      {
+        "titulo": "Política de Cookies",
+        "contenido": "En el sitio web de Wow Comics, valoramos tu privacidad y queremos ofrecerte la mejor experiencia posible. Esta política de cookies explica cómo utilizamos las cookies y cómo puedes gestionar tus preferencias en relación con ellas."
+      },
+      {
+        "titulo": "¿Qué son las cookies?",
+        "contenido": "Las cookies son pequeños archivos de texto que se almacenan en tu dispositivo cuando visitas un sitio web. Estos archivos contienen información que se utiliza para recordar tus preferencias y mejorar tu experiencia en línea. Pueden ser temporales (eliminadas al cerrar el navegador) o persistentes (almacenadas en tu dispositivo durante más tiempo)."
+      }
+    ],
+
+    "seccion2": [
+      {
+        "titulo1": "¿Cómo utilizamos las cookies?",
+        "contenido0":"En Wow Comics, utilizamos cookies con los siguientes propósitos:",
+        "contenido2":"1. Mejora de la Experiencia del Usuario: Recordamos tus preferencias, como el idioma y la ubicación, para que no tengas que configurarlas en cada visita.",
+        "contenido3":"2. Análisis y Estadísticas: Recopilamos información sobre cómo los usuarios interactúan con nuestro sitio para comprender mejor el comportamiento de los visitantes y mejorar nuestro contenido y servicios.",
+        "contenido4":"3. Publicidad Personalizada: Mostramos anuncios relevantes basados en tus intereses y comportamiento de navegación."
+      }
+    ],
+
+    "seccion3": [
+        {
+          "titulo2": "Gestión de Cookies",
+          "contenido1": "Puedes gestionar tus preferencias de cookies en cualquier momento. La mayoría de los navegadores web permiten controlar las cookies a través de la configuración. Puedes configurar tu navegador para recibir notificaciones sobre el envío de cookies o bloquearlas por completo. Ten en cuenta que al deshabilitar las cookies, algunas funciones de nuestro sitio web pueden no funcionar correctamente."
+        },
+        {
+          "titulo2": "Cambios en la Política de Cookies",
+          "contenido1": "Nos reservamos el derecho de modificar esta política de cookies en cualquier momento. Cualquier cambio se reflejará en esta página. Te recomendamos que consultes esta política regularmente para estar al tanto de las actualizaciones."
+        },
+        {
+          "titulo2": "Contacto",
+          "contenido1": "Si tienes alguna pregunta o inquietud sobre nuestra política de cookies, no dudes en ponerte en contacto con nosotros a través de la información proporcionada en la sección -Contacto- de nuestro sitio web. Agradecemos tu visita a Wow Comics y confianza en nosotros para satisfacer tu pasión por los cómics."
+        }
+    ]
+}
+  
