@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 2px;
+}
+
 #comicsh{
     color: #002b80;
     text-align: center;
@@ -96,12 +103,77 @@
 }
 
 .container{
-    width: 75%;
+    width: 95%;
 }
 
 #comic-container{
-    margin-bottom: 100px;
+    margin-bottom: 20px;
 }
+
+#cargarMas {
+    margin-bottom: 70px;
+    text-align: center;
+}
+  
+#cargarMas button {
+    background-color: #002b80;
+    color: white;
+    border-radius: 3px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+#cargarMas button:hover{
+    color: #fcf803;
+}
+
+#mostrarMenos {
+    margin-bottom: 70px;
+    text-align: center;
+}
+  
+#mostrarMenos button {
+    background-color: #002b80;
+    color: white;
+    border-radius: 3px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+#mostrarMenos button:hover{
+    color: #fcf803;
+}
+
+#filtroDropdown{
+    margin-top: 20px;
+}
+
+.filtro-dropdown div label {
+    margin-right: 10px;
+}
+
+
+.filtro-dropdown div select {
+    vertical-align:middle;
+    margin-right: 15px;
+}
+
+.filtro-dropdown div button {
+    vertical-align: middle;
+}
+
+#publisherFilter{
+    margin-bottom: 20px;
+}
+
+#precioMax{
+    margin-right: 10px;
+}
+
+
+
 
 
 
@@ -181,6 +253,7 @@
     max-height: 100%;
 }
 
+
 @media (max-width: 767px) {
     .card .img-wrapper {
         height: 14em;
@@ -240,13 +313,21 @@
     }
 
     #comic-container{
+        margin-bottom: 1px;
+    }
+    
+    #cargarMas {
+        margin-bottom: 40px;
+    }
+
+    #mostrarMenos {
         margin-bottom: 40px;
     }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
     .card-title{
-        height: 120px;
+        height: 140px;
         margin-top: -10px;
     }
 

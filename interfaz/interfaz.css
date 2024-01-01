@@ -170,6 +170,22 @@
       margin-bottom: 0px;
       margin-top: 20px;
     }
+    #prev, #next {
+      margin-top: -85px;
+      font-size: 52px;
+    }
+
+    #prev {
+        left: 5px;
+    }
+        
+    #next {
+        right: 5px;
+    }
+
+    .carousel-objeto img {
+        width: 100%; 
+    }
   }
 
   @media (min-width: 768px) and (max-width: 991px) {
@@ -185,6 +201,23 @@
     .card{
       margin-left: 7px;
       margin-right: 10px;
+    }
+
+    #prev, #next {
+      margin-top: -150px;
+      font-size: 72px;
+    }
+
+    #prev {
+        left: 10px;
+    }
+    
+    #next {
+        right: 10px;
+    }
+    
+    .carousel-objeto img {
+        width: 100%; 
     }
     
   }

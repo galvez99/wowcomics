@@ -50,10 +50,10 @@
         "publisher": "Marvel"
       },
       {
-        "title": "Marvel Saga. El Asombroso Spiderman 12: De Vuelta Al Negro",
-        "imageSrc": "/img/sagaspd.jpg",
-        "altText": "Marvel Saga. El Asombroso Spiderman 12: De Vuelta Al Negro",
-        "price": "11,40 €",
+        "title": "Marvel Saga. El Castigador 1",
+        "imageSrc": "/img/sagapunisher.jpg",
+        "altText": "Marvel Saga. El Castigador 1",
+        "price": "14,25 €",
         "publisher": "Marvel"
       },
       {
@@ -204,9 +204,9 @@
       "publisher": "Marvel"
     },
     {
-      "title": "Marvel Deluxe. Capitán América de Ta-Nehisi Coates 1",
+      "title": "Marvel Deluxe. Capitán América 1",
       "imageSrc": "/img/capi1.jpg",
-      "altText": "Marvel Deluxe. Capitán América de Ta-Nehisi Coates 1",
+      "altText": "Marvel Deluxe. Capitán América 1",
       "price": "41,80 €",
       "publisher": "Marvel"
     },

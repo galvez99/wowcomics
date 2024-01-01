@@ -35,9 +35,9 @@
                 <a id="merch" href="comics.html">Comics</a>
                 <div id="drop1" class="dropdown-content">
                     <a href="comics.html">Ver todos</a>
-                    <a href="#">Marvel</a>
-                    <a href="#">DC</a>
-                    <a href="#">Vertigo</a>
+                    <a href="comics.html">Marvel</a>
+                    <a href="comics.html">DC</a>
+                    <a href="">Vertigo</a>
                     <a href="#">Otros</a>
                 </div>
             </div>
@@ -142,17 +142,49 @@
     <div id="acciones">
       <button onclick="ordenar()">
         <img class="ordenar" src="/img/ordenar.png" alt="Carrito de compras">
-        Ordenar
+        Ordenar  
       </button>
       <button onclick="filtrar()">
-        <img class="filtro" src="/img/filtro.png" alt="Carrito de compras">
+        <img class="ordenar" src="/img/filtro.png" alt="Carrito de compras">
         Filtrar
-      </button>
+    </button>
+    <div id="filtroDropdown" class="filtro-dropdown" style="display: none;">
+        <div>
+            <label>Filtrar por Marca:</label>
+            <select id="publisherFilter" multiple>
+                <option value="Marvel">Marvel</option>
+                <option value="DC">DC</option>
+                <option value="Vertigo">Vertigo</option>
+                <option value="Otros">Otros</option>
+            </select>
+            <button onclick="aplicarFiltro()">Aplicar</button>
+        </div>
+        <div>
+            <label>Filtrar por Precio:</label>
+            <input type="number" id="precioMin" placeholder="Precio mínimo">
+            <input type="number" id="precioMax" placeholder="Precio máximo">
+            <button onclick="aplicarFiltroPrecio()">Aplicar</button>
+        </div>
+    </div>
     </div>
 
     <div class="container text-center" id="comic-container">
-      <!-- La estructura de las tarjetas se agregará aquí dinámicamente -->
+        <!-- La estructura de las tarjetas se agregará aquí dinámicamente -->
     </div>
+
+   
+    
+    <div id="cargarMas">
+        <button onclick="cargarMasComics()">Cargar más</button>
+    </div>
+
+    <div id="mostrarMenos" style="display:none;">
+        <button onclick="mostrarMenosComics()">Mostrar menos</button>
+    </div>
+    
+    
+
+
 
     <footer>
         <a class="elemento" href="/avisolegal/avisolegal.html"> Aviso legal </a>
