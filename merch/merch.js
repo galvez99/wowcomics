@@ -4,7 +4,7 @@ var paginaActual = 1;
 
 $(document).ready(function () {
     $.ajax({
-        url: 'comics.json',
+        url: 'merch.json',
         type: 'GET',
         dataType: 'json',
         success: function (data) {
