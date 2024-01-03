@@ -1,5 +1,5 @@
-var datosComics;
-var comicsPorPagina = 16;
+var datosMerchandising;
+var merchPorPagina = 16;
 var paginaActual = 1;
 
 $(document).ready(function () {
@@ -8,20 +8,12 @@ $(document).ready(function () {
         type: 'GET',
         dataType: 'json',
         success: function (data) {
-            datosComics = data.comics;
-            mostrarComics();
+            datosMerchandising = data.merchandising;
+            mostrarMerchandising();
         },
         error: function (error) {
             console.log('Error al cargar el JSON:', error);
         }
-    });
-
-    $('#filtrarPorPrecio').on('click', function () {
-        $('#filtroDropdownPrecio').toggle();
-    });
-
-    $('#aplicarFiltroPrecio').on('click', function () {
-        aplicarFiltro();
     });
 
     $('#btnOrdenar').on('click', function () {
@@ -35,28 +27,36 @@ $(document).ready(function () {
     $('#aplicarOrden').on('click', function () {
         aplicarOrden();
     });
+
+    $('#filtrar').on('click', function () {
+        filtrar();
+    });
+
+    $('#aplicarFiltro').on('click', function () {
+        aplicarFiltro();
+    });
 });
 
-function mostrarComics() {
-    var indiceInicio = (paginaActual - 1) * comicsPorPagina;
-    var indiceFin = indiceInicio + comicsPorPagina;
+function mostrarMerchandising() {
+    var indiceInicio = (paginaActual - 1) * merchPorPagina;
+    var indiceFin = indiceInicio + merchPorPagina;
     var esPrimeraPagina = (indiceInicio === 0);
 
     if (esPrimeraPagina) {
-        $('#comic-container').html('<div class="row row-cols-2 row-cols-md-4"></div>');
+        $('#merch-container').html('<div class="row row-cols-2 row-cols-md-4"></div>');
     }
 
-    var filteredComics = filtrarComics();
+    var filteredMerch = filtrarMerchandising();
 
-    for (var i = indiceInicio; i < indiceFin && i < filteredComics.length; i++) {
-        var comic = filteredComics[i];
+    for (var i = indiceInicio; i < indiceFin && i < filteredMerch.length; i++) {
+        var merch = filteredMerch[i];
         var cardHtml = `
             <div class="col">
                 <div class="card">
-                    <div class="img-wrapper"><img src="${comic.imageSrc}" alt="${comic.altText}"></div>
+                    <div class="img-wrapper"><img src="${merch.imageSrc}" alt="${merch.altText}"></div>
                     <div class="card-body">
-                        <h5 class="card-title">${comic.title}</h5>
-                        <h5 class="card-text">${comic.price}</h5>
+                        <h5 class="card-title">${merch.title}</h5>
+                        <h5 class="card-text">${merch.price}</h5>
                         <div class="custom-button">
                             <button onclick="anadirAlCarrito()">
                                 <img class="bcarro" src="/img/carrito.png" alt="Carrito de compras">
@@ -66,10 +66,10 @@ function mostrarComics() {
                     </div>
                 </div>
             </div>`;
-        $('#comic-container .row').append(cardHtml);
+        $('#merch-container .row').append(cardHtml);
     }
 
-    if (indiceFin < filteredComics.length) {
+    if (indiceFin < filteredMerch.length) {
         $('#cargarMas').show();
         $('#mostrarMenos').hide();
     } else if (!esPrimeraPagina) {
@@ -81,14 +81,14 @@ function mostrarComics() {
     }
 }
 
-function cargarMasComics() {
+function cargarMasMerch() {
     paginaActual++;
-    mostrarComics();
+    mostrarMerchandising();
 }
 
-function mostrarMenosComics() {
+function mostrarMenosMerch() {
     paginaActual = 1;
-    mostrarComics();
+    mostrarMerchandising();
 }
 
 function anadirAlCarrito() {
@@ -100,29 +100,31 @@ function filtrar() {
 }
 
 function aplicarFiltro() {
-    mostrarComics();
+    mostrarMerchandising();
     $('#filtroDropdown').hide();
     $('#filtroDropdownPrecio').hide();
 }
 
-function filtrarComics() {
-    var selectedPublishers = $('#publisherFilter').val();
+function filtrarMerchandising() {
+    var selectedCategorias = $('#categoriaFilter').val();
+    var selectedTipos = $('#tipoFilter').val();
     var precioMin = parseFloat($('#precioMin').val()) || 0;
     var precioMax = parseFloat($('#precioMax').val()) || Number.MAX_VALUE;
 
-    var filteredComics = datosComics.filter(function (comic) {
-        var precio = parseFloat(comic.price.replace('€', '').replace(',', '.'));
+    var filteredMerch = datosMerchandising.filter(function (merch) {
+        var precio = parseFloat(merch.price.replace('€', '').replace(',', '.'));
+
         return (
-            (selectedPublishers.length === 0 || selectedPublishers.includes(comic.publisher)) &&
+            (selectedCategorias.length === 0 || selectedCategorias.includes(merch.categoria)) &&
+            (selectedTipos.length === 0 || selectedTipos.includes(merch.tipo)) &&
             precio >= precioMin &&
             precio <= precioMax
         );
     });
 
-    return filteredComics;
+    return filteredMerch;
 }
 
-// Funciones adicionales para ordenar cómics con jQuery
 function mostrarMenuOrdenar() {
     $('#menuOrdenar').toggle();
 }
@@ -147,11 +149,11 @@ function aplicarOrden() {
         }
     });
 
-    mostrarComics();
+    mostrarMerchandising();
 }
 
 function sortByPrice(order) {
-    datosComics.sort((a, b) => {
+    datosMerchandising.sort((a, b) => {
         const priceA = parseFloat(a.price.replace('€', '').replace(',', '.'));
         const priceB = parseFloat(b.price.replace('€', '').replace(',', '.'));
         return order === 'asc' ? priceA - priceB : priceB - priceA;
@@ -159,7 +161,7 @@ function sortByPrice(order) {
 }
 
 function sortByTitle(order) {
-    datosComics.sort((a, b) => {
+    datosMerchandising.sort((a, b) => {
         const titleA = a.title.toLowerCase();
         const titleB = b.title.toLowerCase();
         return order === 'asc' ? titleA.localeCompare(titleB) : titleB.localeCompare(titleA);

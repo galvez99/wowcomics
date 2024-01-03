@@ -1,388 +1,388 @@
 {
-    "comics": [
+    "merchandising": [
       {
-        "title": "",
-        "imageSrc": "",
-        "altText": "",
-        "price": "",
-        "tipo":"",
-        "categoria":""
+        "title": "Figura Scout Trooper Star Wars The Black Series",
+        "imageSrc": "/img/starwarsbs1.jpg",
+        "altText": "Figura Scout Trooper Star Wars The Black Series",
+        "price": "25,49 €",
+        "tipo":"Star Wars",
+        "categoria":"Figura"
       },
       {
-        "title": "",
-        "imageSrc": "",
-        "altText": "",
-        "price": "",
-        "tipo":"",
-        "categoria":""
+        "title": "Figura Axe Woves Star Wars The Black Series",
+        "imageSrc": "/img/starwarsbs2.jpg",
+        "altText": "Figura Axe Woves Star Wars The Mandalorian Black Series",
+        "price": "25,49 €",
+        "tipo":"Star Wars",
+        "categoria":"Figura"
       },
       {
-        "title": "",
-        "imageSrc": "",
-        "altText": "",
-        "price": "",
-        "tipo":"",
-        "categoria":""
+        "title": "Figura Kenner Star Wars Clone Trooper",
+        "imageSrc": "/img/starwarskenner1.jpg",
+        "altText": "Figura Kenner Star Wars Clone Trooper",
+        "price": "22,50 €",
+        "tipo":"Star Wars",
+        "categoria":"Figura"
       },
       {
-        "title": "",
-        "imageSrc": "",
-        "altText": "",
-        "price": "",
-        "tipo":"",
-        "categoria":""
+        "title": "Figura Kenner Star Wars The Clone Wars Darth Maul",
+        "imageSrc": "/img/starwarskenner2.jpg",
+        "altText": "Figura Kenner Star Wars The Clone Wars Darth Maul",
+        "price": "24,95 €",
+        "tipo":"Star Wars",
+        "categoria":"Figura"
       },
       {
-        "title": "",
-        "imageSrc": "",
-        "altText": "",
-        "price": "",
-        "tipo":"",
-        "categoria":""
+        "title": "NECA Figura Ultimate Chucky",
+        "imageSrc": "/img/chucky1.jpg",
+        "altText": "NECA Figura Ultimate Chucky",
+        "price": "47,04 €",
+        "tipo":"Terror",
+        "categoria":"Figura"
       },
       {
-        "title": "",
-        "imageSrc": "",
-        "altText": "",
-        "price": "",
-        "tipo":"",
-        "categoria":""
+        "title": "NECA Figura Ghostface Scream",
+        "imageSrc": "/img/scream1.jpg",
+        "altText": "NECA Figura Ghostface Scream",
+        "price": "49,95 €",
+        "tipo":"Terror",
+        "categoria":"Figura"
       },
       {
-        "title": "",
-        "imageSrc": "",
-        "altText": "",
-        "price": "",
-        "tipo":"",
-        "categoria":""
+        "title": "NECA Figura Viernes 13 Parte II",
+        "imageSrc": "/img/f13th.jpg",
+        "altText": "NECA Figura Viernes 13 Parte II",
+        "price": "49,95 €",
+        "tipo":"Terror",
+        "categoria":"Figura"
       },
       {
-        "title": "",
-        "imageSrc": "",
-        "altText": "",
-        "price": "",
-        "tipo":"",
-        "categoria":""
+        "title": "NECA Figura Pesadilla en Elm Sreet Dream Warriors",
+        "imageSrc": "/img/pesadilla1.jpg",
+        "altText": "NECA Figura Pesadilla en Elm Sreet Dream Warriors",
+        "price": "49,95 €",
+        "tipo":"Terror",
+        "categoria":"Figura"
       },
       {
-        "title": "",
-        "imageSrc": "",
-        "altText": "",
-        "price": "",
-        "tipo":"",
-        "categoria":""
+        "title": "Ghost Face Figura 1/6 Ghost Face Sideshow",
+        "imageSrc": "/img/scream2.jpg",
+        "altText": "Ghost Face Figura 1/6 Ghost Face Sideshow",
+        "price": "259 €",
+        "tipo":"Terror",
+        "categoria":"Figura"
       },
       {
-        "title": "",
-        "imageSrc": "",
-        "altText": "",
-        "price": "",
-        "tipo":"",
-        "categoria":""
+        "title": "Hot Toys Figura 1/6 Pennywise It: Capítulo Dos.",
+        "imageSrc": "/img/it.jpg",
+        "altText": "Hot Toys Figura 1/6 Pennywise 32 cm. It: Capítulo Dos.",
+        "price": "373 €",
+        "tipo":"Terror",
+        "categoria":"Figura"
       },
       {
-        "title": "",
-        "imageSrc": "",
-        "altText": "",
-        "price": "",
-        "tipo":"",
-        "categoria":""
+        "title": "HOT TOYS Figura 1/6 Batman Begins",
+        "imageSrc": "/img/batmanhot.jpg",
+        "altText": "HOT TOYS Figura 1/6 Batman Begins",
+        "price": "319 €",
+        "tipo":"Superheroes",
+        "categoria":"Figura"
       },
       {
-        "title": "",
-        "imageSrc": "",
-        "altText": "",
-        "price": "",
-        "tipo":"",
-        "categoria":""
+        "title": "HOT TOYS Figura 1/6 The Batman",
+        "imageSrc": "/img/batmanhot2.jpg",
+        "altText": "HOT TOYS Figura 1/6 The Batman",
+        "price": "359,95 €",
+        "tipo":"Superheroes",
+        "categoria":"Figura"
       },
       {
-        "title": "",
-        "imageSrc": "",
-        "altText": "",
-        "price": "",
-        "tipo":"",
-        "categoria":""
+        "title": "HOT TOYS Figura 1/6 MYSTERIO",
+        "imageSrc": "/img/mysterio.jpg",
+        "altText": "HOT TOYS Figura 1/6 SPIDER-MAN FAR FROM HOME : MYSTERIO",
+        "price": "319,90 €",
+        "tipo":"Superheroes",
+        "categoria":"Figura"
       },
       {
-        "title": "",
-        "imageSrc": "",
-        "altText": "",
-        "price": "",
-        "tipo":"",
-        "categoria":""
+        "title": "Hot Toys Figura 1/6 THE AMAZING SPIDER-MAN",
+        "imageSrc": "/img/spiderman.jpg",
+        "altText": "Hot Toys Figura 1/6 THE AMAZING SPIDER-MAN",
+        "price": "369 €",
+        "tipo":"Superheroes",
+        "categoria":"Figura"
       },
       {
-        "title": "",
-        "imageSrc": "",
-        "altText": "",
-        "price": "",
-        "tipo":"",
-        "categoria":""
+        "title": "Camiseta Star Wars Episodio 4",
+        "imageSrc": "/img/camisetastarwars.jpg",
+        "altText": "Camiseta Star Wars Episodio 4",
+        "price": "13,50 €",
+        "tipo":"Star Wars",
+        "categoria":"Ropa"
       },
       {
-        "title": "",
-        "imageSrc": "",
-        "altText": "",
-        "price": "",
-        "tipo":"",
-        "categoria":""
+        "title": "Camiseta Star Wars Negra Letrero",
+        "imageSrc": "/img/camisetastarwars2.jpg",
+        "altText": "Camiseta Star Wars Negra Letrero",
+        "price": "13,50 €",
+        "tipo":"Star Wars",
+        "categoria":"Ropa"
       },
       {
-        "title": "",
-        "imageSrc": "",
-        "altText": "",
-        "price": "",
-        "tipo":"",
-        "categoria":""
+        "title": "Camiseta Marvel Blanca letrero",
+        "imageSrc": "/img/camisetamarvel.jpg",
+        "altText": "Camiseta Marvel Blanca letrero",
+        "price": "15,50 €",
+        "tipo":"Superheroes",
+        "categoria":"Ropa"
       },
       {
-        "title": "",
-        "imageSrc": "",
-        "altText": "",
-        "price": "",
-        "tipo":"",
-        "categoria":""
+        "title": "Camiseta Marvel Negra letrero",
+        "imageSrc": "/img/camisetamarvel2.jpg",
+        "altText": "Camiseta Marvel Negra letrero",
+        "price": "15,50 €",
+        "tipo":"Superheroes",
+        "categoria":"Ropa"
       },
       {
-        "title": "",
-        "imageSrc": "",
-        "altText": "",
-        "price": "",
-        "tipo":"",
-        "categoria":""
+        "title": "Marvel Legends Series Figura Quake",
+        "imageSrc": "/img/legends.jpg",
+        "altText": "Marvel Legends Series Figura Quake",
+        "price": "29,95 €",
+        "tipo":"Superheroes",
+        "categoria":"Figura"
       },
       {
-        "title": "",
-        "imageSrc": "",
-        "altText": "",
-        "price": "",
-        "tipo":"",
-        "categoria":""
+        "title": "Marvel Legends Series Figura Blue Marvel",
+        "imageSrc": "/img/legends2.jpg",
+        "altText": "Marvel Legends Series Figura Blue Marvel",
+        "price": "29,95 €",
+        "tipo":"Superheroes",
+        "categoria":"Figura"
       },
       {
-        "title": "",
-        "imageSrc": "",
-        "altText": "",
-        "price": "",
-        "tipo":"",
-        "categoria":""
+        "title": "Marvel Legends Series Figura Doctor Strange",
+        "imageSrc": "/img/legends3.jpg",
+        "altText": "Marvel Legends Series Figura Doctor Strange What If?",
+        "price": "29,95 €",
+        "tipo":"Superheroes",
+        "categoria":"Figura"
       },
       {
-        "title": "",
-        "imageSrc": "",
-        "altText": "",
-        "price": "",
-        "tipo":"",
-        "categoria":""
+        "title": "Marvel Legends Series Figura Capitán América",
+        "imageSrc": "/img/legends4.jpg",
+        "altText": "Marvel Legends Series Figura Capitán América The Infinity Saga",
+        "price": "29,95 €",
+        "tipo":"Superheroes",
+        "categoria":"Figura"
       },
       {
-        "title": "",
-        "imageSrc": "",
-        "altText": "",
-        "price": "",
-        "tipo":"",
-        "categoria":""
+        "title": "Figura WWE EDGE Series 128",
+        "imageSrc": "/img/wwe.jpeg",
+        "altText": "Figura WWE EDGE Series 128",
+        "price": "18,50 €",
+        "tipo":"Otros",
+        "categoria":"Figura"
       },
       {
-        "title": "",
-        "imageSrc": "",
-        "altText": "",
-        "price": "",
-        "tipo":"",
-        "categoria":""
+        "title": "Figura WWE Series Drew McIntyre",
+        "imageSrc": "/img/wwe2.jpg",
+        "altText": "Figura WWE Series Drew McIntyre",
+        "price": "18,50 €",
+        "tipo":"Otros",
+        "categoria":"Figura"
       },
       {
-        "title": "",
-        "imageSrc": "",
-        "altText": "",
-        "price": "",
-        "tipo":"",
-        "categoria":""
+        "title": "Figura WWE Series Crhis Jericho",
+        "imageSrc": "/img/wwe4.jpg",
+        "altText": "Figura WWE Series Crhis Jericho",
+        "price": "18,50 €",
+        "tipo":"Otros",
+        "categoria":"Figura"
       },
       {
-        "title": "",
-        "imageSrc": "",
-        "altText": "",
-        "price": "",
-        "tipo":"",
-        "categoria":""
+        "title": "Figura WWE Series Hulk Hogan",
+        "imageSrc": "/img/wwe3.jpg",
+        "altText": "Figura WWE Series Hulk Hogan",
+        "price": "21,50 €",
+        "tipo":"Otros",
+        "categoria":"Figura"
       },
       {
-        "title": "",
-        "imageSrc": "",
-        "altText": "",
-        "price": "",
-        "tipo":"",
-        "categoria":""
+        "title": "Camiseta WWE John Cena Verde Respect",
+        "imageSrc": "/img/cena.png",
+        "altText": "Camiseta WWE John Cena Verde Respect",
+        "price": "29,95 €",
+        "tipo":"Otros",
+        "categoria":"Ropa"
       },
       {
-        "title": "",
-        "imageSrc": "",
-        "altText": "",
-        "price": "",
-        "tipo":"",
-        "categoria":""
+        "title": "Camiseta WWE John Cena Negra Never Give Up",
+        "imageSrc": "/img/cena2.jpeg",
+        "altText": "Camiseta WWE John Cena Negra Never Give Up",
+        "price": "24,95 €",
+        "tipo":"Otros",
+        "categoria":"Ropa"
       },
       {
-        "title": "",
-        "imageSrc": "",
-        "altText": "",
-        "price": "",
-        "tipo":"",
-        "categoria":""
+        "title": "Taza Logo WWE",
+        "imageSrc": "/img/tazawwe.jpg",
+        "altText": "Taza Logo WWE",
+        "price": "9,50 €",
+        "tipo":"Otros",
+        "categoria":"Tazas"
       },
       {
-        "title": "",
-        "imageSrc": "",
-        "altText": "",
-        "price": "",
-        "tipo":"",
-        "categoria":""
+        "title": "Taza Cinturón WWE",
+        "imageSrc": "/img/tazawwe2.jpg",
+        "altText": "Taza Cinturón WWE",
+        "price": "9,50 €",
+        "tipo":"Otros",
+        "categoria":"Tazas"
       },
       {
-        "title": "",
-        "imageSrc": "",
-        "altText": "",
-        "price": "",
-        "tipo":"",
-        "categoria":""
+        "title": "Taza Cinturón Negro WWE",
+        "imageSrc": "/img/tazawwe3.jpg",
+        "altText": "Taza Cinturón Negro WWE",
+        "price": "9,50 €",
+        "tipo":"Otros",
+        "categoria":"Tazas"
       },
       {
-        "title": "",
-        "imageSrc": "",
-        "altText": "",
-        "price": "",
-        "tipo":"",
-        "categoria":""
+        "title": "Taza Star Wars Sith Trooper EP9",
+        "imageSrc": "/img/tazastarwars.jpg",
+        "altText": "Taza Star Wars Sith Trooper EP9",
+        "price": "9,90 €",
+        "tipo":"Star Wars",
+        "categoria":"Tazas"
       },
       {
-        "title": "",
-        "imageSrc": "",
-        "altText": "",
-        "price": "",
-        "tipo":"",
-        "categoria":""
+        "title": "Taza Star Wars The Mandalorian",
+        "imageSrc": "/img/tazastarwars2.jpg",
+        "altText": "Taza Star Wars The Mandalorian",
+        "price": "9,90 €",
+        "tipo":"Star Wars",
+        "categoria":"Tazas"
       },
       {
-        "title": "",
-        "imageSrc": "",
-        "altText": "",
-        "price": "",
-        "tipo":"",
-        "categoria":""
+        "title": "Taza Marvel Iron Man",
+        "imageSrc": "/img/tazamarvel.jpg",
+        "altText": "Taza Marvel Iron Man",
+        "price": "10,90 €",
+        "tipo":"Superheroes",
+        "categoria":"Tazas"
       },
       {
-        "title": "",
-        "imageSrc": "",
-        "altText": "",
-        "price": "",
-        "tipo":"",
-        "categoria":""
+        "title": "Taza Marvel Logo",
+        "imageSrc": "/img/tazamarvel2.jpg",
+        "altText": "Taza Marvel Logo",
+        "price": "9,90 €",
+        "tipo":"Superheroes",
+        "categoria":"Tazas"
       },
       {
-        "title": "",
-        "imageSrc": "",
-        "altText": "",
-        "price": "",
-        "tipo":"",
-        "categoria":""
+        "title": "Taza Batman Logo",
+        "imageSrc": "/img/tazadc.jpg",
+        "altText": "Taza Batman Logo",
+        "price": "9,90 €",
+        "tipo":"Superheroes",
+        "categoria":"Tazas"
       },
       {
-        "title": "",
-        "imageSrc": "",
-        "altText": "",
-        "price": "",
-        "tipo":"",
-        "categoria":""
+        "title": "Taza Superman Logo",
+        "imageSrc": "/img/tazadc2.jpg",
+        "altText": "Taza Superman Logo",
+        "price": "12,90 €",
+        "tipo":"Superheroes",
+        "categoria":"Tazas"
       },
       {
-        "title": "",
-        "imageSrc": "",
-        "altText": "",
-        "price": "",
-        "tipo":"",
-        "categoria":""
+        "title": "Camiseta Negra Scream Ghostface",
+        "imageSrc": "/img/camisetascream.jpg",
+        "altText": "Camiseta Scream Ghostface",
+        "price": "24,90 €",
+        "tipo":"Terror",
+        "categoria":"Ropa"
       },
       {
-        "title": "",
-        "imageSrc": "",
-        "altText": "",
-        "price": "",
-        "tipo":"",
-        "categoria":""
+        "title": "Camiseta Negra Viernes 13",
+        "imageSrc": "/img/camisetav13.jpg",
+        "altText": "Camiseta Viernes 13",
+        "price": "24,90 €",
+        "tipo":"Terror",
+        "categoria":"Ropa"
       },
       {
-        "title": "",
-        "imageSrc": "",
-        "altText": "",
-        "price": "",
-        "tipo":"",
-        "categoria":""
+        "title": "Camiseta Negra Batman",
+        "imageSrc": "/img/camisetabatman.jpg",
+        "altText": "Camiseta Negra Batman",
+        "price": "24,90 €",
+        "tipo":"Superheroes",
+        "categoria":"Ropa"
       },
       {
-        "title": "",
-        "imageSrc": "",
-        "altText": "",
-        "price": "",
-        "tipo":"",
-        "categoria":""
+        "title": "Camiseta Azul Superman",
+        "imageSrc": "/img/camisetasuperman.jpg",
+        "altText": "Camiseta Azul Superman",
+        "price": "22,90 €",
+        "tipo":"Superheroes",
+        "categoria":"Ropa"
       },
       {
-        "title": "",
-        "imageSrc": "",
-        "altText": "",
-        "price": "",
-        "tipo":"",
-        "categoria":""
+        "title": "FIGURA BATMAN DC MULTIVERSE MCFARLANE TOYS",
+        "imageSrc": "/img/figurabatman.jpg",
+        "altText": "FIGURA BATMAN DC MULTIVERSE MCFARLANE TOYS",
+        "price": "22,95 €",
+        "tipo":"Superheroes",
+        "categoria":"Figura"
       },
       {
-        "title": "",
-        "imageSrc": "",
-        "altText": "",
-        "price": "",
-        "tipo":"",
-        "categoria":""
+        "title": "FIGURA SUPERMAN DC MULTIVERSE MCFARLANE TOYS",
+        "imageSrc": "/img/figurasuperman.jpg",
+        "altText": "FIGURA SUPERMAN DC MULTIVERSE MCFARLANE TOYS",
+        "price": "22,95 €",
+        "tipo":"Superheroes",
+        "categoria":"Figura"
       },
       {
-        "title": "",
-        "imageSrc": "",
-        "altText": "",
-        "price": "",
-        "tipo":"",
-        "categoria":""
+        "title": "FIGURA GREEN LANTERN JOHN STEWART DC MULTIVERSE MCFARLANE TOYS",
+        "imageSrc": "/img/figuragl.jpg",
+        "altText": "FIGURA GREEN LANTERN JOHN STEWART DC MULTIVERSE MCFARLANE TOYS",
+        "price": "22,95 €",
+        "tipo":"Superheroes",
+        "categoria":"Figura"
       },
       {
-        "title": "",
-        "imageSrc": "",
-        "altText": "",
-        "price": "",
-        "tipo":"",
-        "categoria":""
+        "title": "Llavero Marvel El Guantelete del Infinito Thanos",
+        "imageSrc": "/img/llaveromarvel.jpg",
+        "altText": "Llavero Marvel El Guantelete del Infinito Thanos",
+        "price": "5,50 €",
+        "tipo":"Superheroes",
+        "categoria":"Otros"
       },
       {
-        "title": "",
-        "imageSrc": "",
-        "altText": "",
-        "price": "",
-        "tipo":"",
-        "categoria":""
+        "title": "Llavero Marvel Logo",
+        "imageSrc": "/img/llaveromarvel2.jpg",
+        "altText": "Llavero Marvel Logo",
+        "price": "7,50 €",
+        "tipo":"Superheroes",
+        "categoria":"Otros"
       },
       {
-        "title": "",
-        "imageSrc": "",
-        "altText": "",
-        "price": "",
-        "tipo":"",
-        "categoria":""
+        "title": "Llavero Star Wars Stormtrooper",
+        "imageSrc": "/img/llavarostarwars.jpg",
+        "altText": "Llavero Star Wars Stormtrooper",
+        "price": "4,50 €",
+        "tipo":"Star Wars",
+        "categoria":"Otros"
       },
       {
-        "title": "",
-        "imageSrc": "",
-        "altText": "",
-        "price": "",
-        "tipo":"",
-        "categoria":""
+        "title": "Llavero Star Wars Darth Vader",
+        "imageSrc": "/img/llavarostarwars2.jpg",
+        "altText": "Llavero Star Wars Darth Vader",
+        "price": "3,50 €",
+        "tipo":"Star Wars",
+        "categoria":"Otros"
       }
     ]
   }

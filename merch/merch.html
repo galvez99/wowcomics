@@ -137,7 +137,7 @@
   </script>
   
       
-    <h1 id="comicsh">Merchandising</h1>
+    <h1 id="merchh">Merchandising</h1>
 
     <div id="acciones">
         <button id="btnOrdenar">
@@ -162,28 +162,19 @@
             <div class="filtro-container">
                 <div>
                     <label>Filtrar por Categoría:</label>
-                    <select id="publisherFilter" multiple>
-                        <option value="Marvel">Figuras</option>
-                        <option value="DC">Ropa</option>
-                        <option value="Vertigo">Tasas</option>
+                    <select id="categoriaFilter" multiple>
+                        <option value="Figura">Figuras</option>
+                        <option value="Ropa">Ropa</option>
+                        <option value="Tazas">Tazas</option>
                         <option value="Otros">Otros</option>
                     </select>
                 </div>
                 <div>
                     <label>Filtrar por Tipo:</label>
-                    <select id="publisherFilter" multiple>
-                        <option value="Marvel">Terror</option>
-                        <option value="DC">Star Wars</option>
-                        <option value="Vertigo">Super Héroes</option>
-                        <option value="Otros">Otros</option>
-                    </select>
-                </div>
-                <div>
-                    <label>Filtrar por Marcaa:</label>
-                    <select id="publisherFilter" multiple>
-                        <option value="Marvel">Figuras</option>
-                        <option value="DC">Ropa</option>
-                        <option value="Vertigo">Tasas</option>
+                    <select id="tipoFilter" multiple>
+                        <option value="Terror">Terror</option>
+                        <option value="Star Wars">Star Wars</option>
+                        <option value="Superheroes">Super Héroes</option>
                         <option value="Otros">Otros</option>
                     </select>
                 </div>
@@ -197,18 +188,18 @@
         </div>
     </div>
 
-    <div class="container text-center" id="comic-container">
+    <div class="container text-center" id="merch-container">
         <!-- La estructura de las tarjetas se agregará aquí dinámicamente -->
     </div>
 
    
     
     <div id="cargarMas">
-        <button onclick="cargarMasComics()">Mostrar más</button>
+        <button onclick="cargarMasMerch()">Mostrar más</button>
     </div>
 
     <div id="mostrarMenos" style="display:none;">
-        <button onclick="mostrarMenosComics()">Mostrar menos</button>
+        <button onclick="mostrarMenosMerch()">Mostrar menos</button>
     </div>
     
     
