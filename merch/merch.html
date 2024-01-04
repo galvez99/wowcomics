@@ -86,7 +86,7 @@
           let currentIndex = 0;
   
           $.ajax({
-              url: '/carruseles/carrusel2.json',
+              url: '/carruseles/carruselMerch.json',
               dataType: 'json',
               success: function (data) {
                   $.each(data.images, function (index, image) {
@@ -103,12 +103,12 @@
           }
   
           function prevSlide() {
-              currentIndex = (currentIndex - 1 + 3) % 3;
+              currentIndex = (currentIndex - 1 + 5) % 5;
               showSlide(currentIndex);
           }
   
           function nextSlide() {
-              currentIndex = (currentIndex + 1) % 3;
+              currentIndex = (currentIndex + 1) % 5;
               showSlide(currentIndex);
           }
   
