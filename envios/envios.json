@@ -1,0 +1,50 @@
+{
+    "Principal": [
+      {
+        "titulo": "Política de Envíos",
+        "contenido": "En Wow Comics, nos esforzamos por procesar y enviar tus pedidos con la máxima eficiencia. Trabajamos en colaboración con empresas de envío confiables para garantizar que tus cómics lleguen a tus manos en perfecto estado y en el menor tiempo posible."
+      }
+    ],
+
+    "seccion": [
+      {
+        "titulo1": "Procesamiento de Pedidos:",
+        "contenido0":"Una vez que realizas tu compra, nuestros expertos en embalaje se aseguran de que tus cómics estén listos para el envío en un plazo de 1 a 2 días hábiles."
+      },
+      {
+        "titulo1": "Empresas de Envío:",
+        "contenido0":"Colaboramos con compañías de envío de renombre para ofrecerte opciones seguras y rastreables. Puedes seleccionar la empresa de envío de tu preferencia al realizar tu pedido, brindándote flexibilidad y control sobre la entrega."
+      },
+      {
+        "titulo1": "Tiempos de Envío:",
+        "contenido0":"Los tiempos de envío pueden variar según la ubicación y la empresa de envío seleccionada. Por lo general, puedes esperar recibir tu pedido en un plazo de 5 a 10 días hábiles. Ofrecemos opciones de envío exprés para aquellos que deseen recibir sus cómics aún más rápido."
+      },
+      {
+        "titulo1": "Seguimiento de Pedidos:",
+        "contenido0":"Te proporcionaremos un número de seguimiento una vez que tu pedido haya sido enviado, para que puedas rastrear su progreso en tiempo real."
+      }
+    ],
+
+    "Principal2": [
+        {
+          "titulo3": "Política de Devoluciones",
+          "contenido3": "Tu satisfacción es nuestra máxima prioridad en Wow Comics. Si por alguna razón no estás completamente satisfecho con tu compra, ofrecemos una política de devolución justa y sencilla."
+        }
+    ],
+
+    "seccion2": [
+        {
+          "titulo2": "Condiciones de Devolución:",
+          "contenido2":"Aceptamos devoluciones dentro de los 30 días posteriores a la recepción de tu pedido. Los productos deben estar en su estado original, sin abrir y sin daños."
+        },
+        {
+          "titulo2": "Proceso de Devolución:",
+          "contenido2":"Para iniciar una devolución, simplemente contáctanos a través de nuestro servicio de atención al cliente. Te proporcionaremos instrucciones detalladas sobre cómo devolver tu pedido."
+        },
+        {
+          "titulo2": "Reembolsos:",
+          "contenido2":"Una vez que recibamos y verifiquemos tu devolución, procesaremos el reembolso en un plazo de 5 días hábiles. Ten en cuenta que los gastos de envío originales no son reembolsables."
+        }
+    ]
+}
+  
