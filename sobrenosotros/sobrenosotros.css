@@ -13,6 +13,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+
 #nosotros-container {
     margin-left: 20px;
     margin-right: 20px;
@@ -31,6 +32,72 @@
   .nosotros-section h5 {
     color: white; 
   }
+
+  .nosotros-section {
+    text-align: center; 
+}
+
+.nosotros-section img {
+    width: 170px; 
+    height: 170px; 
+    display: block; 
+    margin: 0 auto; 
+}
+
+
+
+#carousel-container {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  margin-left: 60px;
+  width: 60vw; 
+  overflow: hidden;
+  position: relative;
+}
+
+#carousel-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-objeto {
+  width: 100vw; 
+  box-sizing: border-box;
+  flex: 0 0 100%; 
+}
+
+.carousel-objeto img {
+  width: 100%; 
+  height: auto; 
+}
+
+#prev, #next {
+  cursor: pointer;
+  position: absolute;
+  margin-top: -320px;
+  font-size: 80px; 
+  color: #F5F5F5;
+}
+
+#prev:hover{
+  color: #E1E1E1;
+  opacity: 1;
+}
+
+#next:hover{
+  color: #E1E1E1;
+  opacity: 1;
+}
+
+#prev {
+  opacity: .6;
+  left: 230px;
+}
+
+#next {
+  opacity: .6;
+  right: 220px;
+}
   
   @media (max-width: 767px) {
     #contenedor{
@@ -42,6 +109,32 @@
         margin-bottom: 30px;
         margin-left: 30px;
         margin-right: 30px;
+    }
+
+    .nosotros-section img {
+      width: 120px; 
+      height: 120px; 
+    }
+
+    #carousel-container {
+      width: 80vw;
+      margin-top: 10px;
+      margin-bottom: 15px;
+      margin-left: 2px;
+    }
+    
+
+    #prev, #next {
+      margin-top: -125px;
+      font-size: 45px;
+    }
+
+    #prev {
+      left: 40px;
+    }
+        
+    #next {
+      right: 40px;
     }
   }
 
@@ -57,6 +150,31 @@
         margin-bottom: 80px;
         margin-left: 80px;
         margin-right: 80px;
+    }
+
+    .nosotros-section img {
+      width: 150px; 
+      height: 150px; 
+    }
+
+    #carousel-container {
+      width: 70vw;
+      margin-top: 10px;
+      margin-bottom: 25px;
+      margin-left: 22px;
+    }
+
+    #prev, #next {
+      margin-top: -195px;
+      font-size: 72px;
+    }
+
+    #prev {
+      left: 82px;
+    }
+    
+    #next {
+      right: 80px;
     }
   }
 

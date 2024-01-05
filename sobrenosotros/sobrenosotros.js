@@ -4,11 +4,21 @@ $(document).ready(function () {
         type: 'GET',
         dataType: 'json',
         success: function (sobreNosotros) {
-            function agregarContenidoSobreNosotros(titulo, contenido, contenido2) {
-                $('#nosotros-container').append('<div class="nosotros-section"><h2>' + titulo + '</h2><h5>' + contenido + '</h5><h5>' + contenido2 + '</h5></div>');
+            function agregarContenidoSobreNosotros(titulo, contenido, contenido2, imagen) {
+                var imagenHTML = imagen ? '<img src="' + imagen + '" alt="' + titulo + '">' : '';
+                $('#nosotros-container').append('<div class="nosotros-section">' +
+                    '<h2>' + titulo + '</h2>' +
+                    '<h5>' + contenido + '</h5>' +
+                    '<h5>' + contenido2 + '</h5>' +
+                    imagenHTML +
+                    '</div>');
             }
 
             $.each(sobreNosotros.secciones, function (index, seccion) {
+                agregarContenidoSobreNosotros(seccion.titulo, seccion.contenido, seccion.contenido2, seccion.imagen);
+            });
+
+            $.each(sobreNosotros.secciones2, function (index, seccion) {
                 agregarContenidoSobreNosotros(seccion.titulo, seccion.contenido, seccion.contenido2);
             });
 

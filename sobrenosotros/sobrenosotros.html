@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="/css/general.css">
     <script type="text/javascript" src="/js/index.js"></script>
     <link rel="website icon" type="png" href="/img/thanos.PNG">
-    <title>Wow Comics - Avisos Legales</title>
+    <title>Wow Comics - Sobre Nosotros</title>
 </head>
 <body>
     <a href="/index.html" id="baner1">
@@ -73,10 +73,70 @@
 
     <div id="contenedor">
         <div id="loading-message">Cargando datos...</div>
-
-        
         <div id="nosotros-container"></div>
+
+        <div id="carousel-container">
+            <div id="carousel-wrapper"></div>
+        </div>
+    
+        <div id="buttons-container">
+            <div id="prev">&lt;</div>
+            <div id="next">&gt;</div>
+        </div>
+
+            
+        <script>
+            $(document).ready(function () {
+                const carouselWrapper = $('#carousel-wrapper');
+                const prevButton = $('#prev');
+                const nextButton = $('#next');
+                let currentIndex = 0;
+                let data;
+        
+                $.ajax({
+                    url: '/carruseles/carruselSobreNosotros.json',
+                    dataType: 'json',
+                    success: function (responseData) {
+                        data = responseData;
+                        $.each(data.images, function (index, image) {
+                            carouselWrapper.append('<div class="carousel-objeto"><img src="' + image.src + '" alt="..."></div>');
+                        });
+        
+                        showSlide(currentIndex);
+                    }
+                });
+        
+                function showSlide(index) {
+                    const slideWidth = $('.carousel-objeto').width(); 
+                    const offset = -index * slideWidth;
+                    carouselWrapper.css('transform', 'translateX(' + offset + 'px)');
+                }
+        
+                function prevSlide() {
+                    currentIndex = (currentIndex - 1 + data.images.length) % data.images.length;
+                    showSlide(currentIndex);
+                }
+        
+                function nextSlide() {
+                    currentIndex = (currentIndex + 1) % data.images.length;
+                    showSlide(currentIndex);
+                }
+        
+                prevButton.on('click', prevSlide);
+                nextButton.on('click', nextSlide);
+        
+                setInterval(nextSlide, 5000);
+            });
+        </script>
+        
+        
+        
+        
+        
     </div>
+    
+    
+    
 
 
 
