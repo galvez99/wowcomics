@@ -91,9 +91,34 @@ function mostrarMenosComics() {
     mostrarComics();
 }
 
-function anadirAlCarrito() {
+function anadirAlCarrito(comic) {
+    var carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    carrito.push(comic);
+    localStorage.setItem('carrito', JSON.stringify(carrito));
     console.log('Añadido al carrito');
 }
+
+function mostrarProductosEnCarrito() {
+    var carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    var itemsContainer = $('#itemsContainer');
+    itemsContainer.empty();
+
+    carrito.forEach(function (comic) {
+        var itemHtml = `
+           <div class="item">
+               <img src="${comic.imageSrc}" alt="${comic.altText}">
+               <span>${comic.title}</span>
+           </div>`;
+        itemsContainer.append(itemHtml);
+    });
+
+    $('#carritoModal').modal('show');
+}
+
+// Agrega un evento de clic al icono del carrito en el navbar
+$('#carrito').on('click', function () {
+    mostrarProductosEnCarrito();
+});
 
 function filtrar() {
     $('#filtroDropdown').toggle();

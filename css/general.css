@@ -150,6 +150,117 @@ footer .elemento:nth-child(8)::before {
     display: none;
 }
 
+.custom-btn {
+    background-color: #002b80;
+    color: #ffffff;
+    margin: 15px; 
+}
+
+.custom-btn:hover {
+    background-color: #002b80;
+    color: #fcf803;
+}
+
+#iniciar{
+    background-color: #002b80;
+    color: #ffffff;
+}
+
+#iniciar:hover{
+    background-color: #002b80;
+    color: #fcf803;
+}
+
+.form-label{
+    color: #002b80;
+    font-size: 22px;
+}
+
+#confirmarInicioSesionBtn{
+    margin-right: 10px;
+    background-color: #002b80;
+}
+
+#confirmarInicioSesionBtn:hover{
+    background-color: #002b80;
+    color: #fcf803;
+}
+
+.modal-title, .modal-body h5 {
+    color: #002b80;
+}
+
+.modal-header{
+    padding-left: 100px;
+}
+
+#sesioncorrecta{
+    padding-left: 80px;
+}
+
+#registrarBtn, #continuarbtn{
+    margin-right: 20px;
+    background-color: #002b80;
+    color: #ffffff;
+}
+
+#registrarBtn:hover, #continuarbtn:hover{
+    background-color: #002b80;
+    color: #fcf803;
+}
+
+.modal-footer{
+    padding-top: 20px;
+}
+
+#carritoModalLabel{
+    padding-left: 200px;
+}
+
+#tramitar{
+    margin-right: 10px;
+    color: white;
+    background-color: #002b80;
+}
+
+#tramitar:hover{
+    background-color: #002b80;
+    color: #fcf803;
+}
+
+#direccionEnvioModalLabel{
+    padding-left: 70px;
+}
+
+.tarjeta {
+    margin-right: 10px;
+    color: white;
+    background-color: #002b80;
+}
+
+.tarjeta:hover{
+    background-color: #002b80;
+    color: #fcf803;
+}
+
+#metodoPagoModalLabel{
+    padding-left: 83px;
+}
+
+#confirmacionFinalModalLabel{
+    padding-left: 70px;
+}
+
+#pedidoRealizadoModalLabel{
+    padding-left: 75px;
+}
+
+.modal-body{
+    text-align: center;
+    padding-left: 20px;
+    color:#002b80;
+}
+
 
 
 @media (max-width: 767px) {
@@ -252,7 +363,6 @@ footer .elemento:nth-child(8)::before {
         content: "Envíos";
     }
 
-
     footer{
         font-size: 18px;
         padding: 20px;
@@ -270,8 +380,37 @@ footer .elemento:nth-child(8)::before {
         display: block;
     }
 
+    .modal-header{
+        padding-left: 70px;
+    }
+    
+    #sesioncorrecta{
+        padding-left: 50px;
+    }
 
+    #carritoModalLabel{
+        padding-left: 15px;
+    }
 
+    #direccionEnvioModalLabel{
+        padding-left: 7px;
+    }
+
+    #metodoPagoModalLabel{
+        padding-left: 50px;
+    }
+    
+    #introducirTarjetaModalLabel{
+        padding-left: 35px;
+    }
+
+    #confirmacionFinalModalLabel{
+        padding-left: 35px;
+    }
+
+    #pedidoRealizadoModalLabel{
+        padding-left: 40px;
+    }
 }
 
 
@@ -345,6 +484,10 @@ footer .elemento:nth-child(8)::before {
 
     footer .elemento:nth-child(6)::before{
         display: none;
+    }
+
+    #carritoModalLabel{
+        padding-left: 55px;
     }
 }
 

@@ -63,10 +63,392 @@
         </div>
 
         <div class="icons">
-            <img id="cliente" src="img/cliente.png" alt="Cliente" >
-            <img id="carrito" src="img/carrito.png" alt="Carrito" >
+            <img id="cliente" src="img/cliente.png" alt="Cliente">
+            <div class="modal" id="clienteModal">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title mx-auto">Zona Cliente</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <button type="button" class="btn custom-btn" id="iniciarSesionBtn">Iniciar Sesión</button>
+                            <button type="button" class="btn custom-btn" id="registrarUsuarioBtn">Registrar Usuario</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal" id="inicioSesionModal">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title mx-auto">Iniciar Sesión</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label for="usuarioCorreo" class="form-label">Usuario o Correo Electrónico</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label for="contrasena" class="form-label">Contraseña</label>
+                                <input type="password" class="form-control">
+                            </div>
+                            <div class="modal-footer justify-content-center">
+                            <button type="button" class="btn btn-primary" id="confirmarInicioSesionBtn">Iniciar</button>
+                            <button type="button" class="btn btn-secondary" id="cancelarInicioSesionBtn">Cancelar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal" id="sesionIniciadaModal">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div id="sesioncorrecta" class="modal-header">
+                            <h5 class="modal-title mx-auto">Sesión Iniciada Correctamente</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <h5>¡Bienvenido/a! Has iniciado sesión con éxito.</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal" id="registroUsuarioModal">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title mx-auto">Registrar Usuario</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label for="gmail" class="form-label">Introduce Gmail</label>
+                                <input type="email" class="form-control" id="gmail">
+                            </div>
+                            <div class="mb-3">
+                                <label for="usuario" class="form-label">Introduce Usuario</label>
+                                <input type="text" class="form-control" id="usuario">
+                            </div>
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label">Introduce Nombre</label>
+                                <input type="text" class="form-control" id="nombre">
+                            </div>
+                            <div class="mb-3">
+                                <label for="apellido" class="form-label">Introduce Apellido</label>
+                                <input type="text" class="form-control" id="apellido">
+                            </div>
+                            <div class="mb-3">
+                                <label for="fechaNacimiento" class="form-label">Introduce fecha nacimiento</label>
+                                <input type="date" class="form-control" id="fechaNacimiento">
+                            </div>
+                            <div class="mb-3">
+                                <label for="contrasena" class="form-label">Introduce contraseña</label>
+                                <input type="password" class="form-control" id="contrasena">
+                            </div>
+                            <div class="modal-footer justify-content-center">
+                            <button type="button" class="btn " id="registrarBtn">Registrar</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal" id="registroConfirmadoModal">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title mx-auto">Usuario registrado Correctamente</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <h5>¡Bienvenido/a! Has registrado tu usuario con éxito.</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <script>
+                $(document).ready(function() {
+                    $("#cliente").click(function() {
+                        $("#clienteModal").modal("show");
+                    });
+            
+                    $("#iniciarSesionBtn").click(function() {
+                        $("#clienteModal").modal("hide");
+                        $("#inicioSesionModal").modal("show");
+                    });
+            
+                    $("#registrarUsuarioBtn").click(function() {
+                        $("#clienteModal").modal("hide");
+                        $("#registroUsuarioModal").modal("show");
+                    });
+            
+                    $("#confirmarInicioSesionBtn").click(function() {
+                        $("#inicioSesionModal").modal("hide");
+                        $("#sesionIniciadaModal").modal("show");
+                    });
+            
+                    $("#cancelarInicioSesionBtn").click(function() {
+                        $("#inicioSesionModal").modal("hide");
+                        $("#clienteModal").modal("hide");
+                    });
+            
+                    $("#registrarBtn").click(function() {
+                        $("#registroUsuarioModal").modal("hide");
+                        $("#registroConfirmadoModal").modal("show");
+                    });
+                });
+            </script>
+
+
+
+            
+            <img id="carrito" src="img/carrito.png" alt="Carrito">
+            <div class="modal fade" id="carritoModal" tabindex="-1" aria-labelledby="carritoModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="carritoModalLabel">Carrito de Compra</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div id="itemsContainer"></div>
+                        </div>
+                        <div class="modal-footer justify-content-center">
+                            <button type="button" id="tramitar" class="btn" data-bs-dismiss="modal" onclick="mostrarDireccionEnvio()">Tramitar Pedido</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Seguir Navegando</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="direccionEnvioModal" tabindex="-1" aria-labelledby="direccionEnvioModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="direccionEnvioModalLabel">Dirección de Envío</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" id="nombre" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="apellido" class="form-label">Apellido</label>
+                                <input type="text" class="form-control" id="apellido" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="direccion" class="form-label">Dirección</label>
+                                <input type="text" class="form-control" id="direccion" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="ciudad" class="form-label">Ciudad</label>
+                                <input type="text" class="form-control" id="ciudad" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="codigoPostal" class="form-label">Código Postal</label>
+                                <input type="text" class="form-control" id="codigoPostal" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="provincia" class="form-label">Provincia</label>
+                                <input type="text" class="form-control" id="provincia" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="telefono" class="form-label">Teléfono</label>
+                                <input type="text" class="form-control" id="telefono" required>
+                            </div>
+
+                            <div class="text-center">
+                                <button type="button" id="continuarbtn" class="btn" onclick="mostrarMetodoPago()">Continuar</button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="metodoPagoModal" tabindex="-1" aria-labelledby="metodoPagoModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="metodoPagoModalLabel">Método de Pago</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-center"> 
+                            <div class="mb-3">
+                                <button type="button" class="tarjeta btn" onclick="seleccionarTarjeta()">Tarjeta Crédito/Débito</button>
+                            </div>
+                            <div class="mb-3">
+                                <button type="button" class="tarjeta btn" onclick="seleccionarContrareembolso()">Contrareembolso</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="introducirTarjetaModal" tabindex="-1" aria-labelledby="introducirTarjetaModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="introducirTarjetaModalLabel">Introducir Tarjeta Crédito/Débito</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label for="nombreTarjeta" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" id="nombreTarjeta" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="numeroTarjeta" class="form-label">Número Tarjeta</label>
+                                <input type="text" class="form-control" id="numeroTarjeta" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="fechaCaducidad" class="form-label">Fecha Caducidad</label>
+                                <input type="text" class="form-control" id="fechaCaducidad" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="cvv" class="form-label">CVV</label>
+                                <input type="text" class="form-control" id="cvv" required>
+                            </div>
+            
+                            <div class="text-center">
+                                <button type="button" class="tarjeta btn" onclick="continuarIntroducirTarjeta()">Continuar</button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="confirmacionFinalModal" tabindex="-1" aria-labelledby="confirmacionFinalModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="confirmacionFinalModalLabel">Confirmación Final</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label for="resumen" class="form-label">Resumen</label>
+                                <!-- Puedes mostrar aquí un resumen de la compra -->
+                                <p id="resumen"></p>
+                            </div>
+                            <div class="mb-3">
+                                <label for="precio" class="form-label">Precio</label>
+                                <!-- Puedes mostrar aquí el precio total de la compra -->
+                                <p id="precio"></p>
+                            </div>
+            
+                            <div class="text-center">
+                                <button type="button" class="tarjeta btn" onclick="confirmarCompra()">Confirmar</button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="pedidoRealizadoModal" tabindex="-1" aria-labelledby="pedidoRealizadoModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="pedidoRealizadoModalLabel">Pedido Realizado</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Pedido realizado con éxito. En cuanto tengamos tu pedido preparado, te mandaremos un email con la confirmación del envío.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                $(document).ready(function(){
+                    $("#carrito").click(function(){
+                        $("#carritoModal").modal('show');
+                    });
+                });
+            
+                function mostrarDireccionEnvio() {
+                    $("#carritoModal").modal('hide');
+                    $("#direccionEnvioModal").modal('show');
+                }
+            
+                function mostrarMetodoPago() {
+                    $("#direccionEnvioModal").modal('hide');
+                    $("#metodoPagoModal").modal('show');
+                }
+            
+                function continuarCompra() {
+                    $("#carritoModal").modal('hide');
+                    $("#direccionEnvioModal").modal('hide');
+                }
+            
+                function seleccionarTarjeta() {
+                    $("#metodoPagoModal").modal('hide');
+                }
+            
+                function seleccionarContrareembolso() {
+                    $("#metodoPagoModal").modal('hide');
+                }
+
+                function seleccionarTarjeta() {
+                    $("#introducirTarjetaModal").modal('show');
+                    $("#metodoPagoModal").modal('hide');
+                }
+
+                function continuarIntroducirTarjeta() {
+                    $("#introducirTarjetaModal").modal('hide');
+                }
+
+                function seleccionarContrareembolso() {
+                    $("#metodoPagoModal").modal('hide');
+                    $("#confirmacionFinalModal").modal('show');
+                    $("#resumen").text("Resumen de la compra: ...");  
+                    $("#precio").text("Precio total: ...");  
+                }
+
+                function confirmarCompra() {
+                    $("#confirmacionFinalModal").modal('hide');
+                }
+
+                function continuarIntroducirTarjeta() {
+                    $("#introducirTarjetaModal").modal('hide');
+                    $("#confirmacionFinalModal").modal('show');
+                    // Puedes agregar aquí la lógica para llenar el resumen y precio antes de mostrar el modal
+                    $("#resumen").text("Resumen de la compra: ...");  // Completa con la información adecuada
+                    $("#precio").text("Precio total: ...");  // Completa con la información adecuada
+                }
+
+                function confirmarCompra() {
+                    // Puedes agregar aquí la lógica para confirmar la compra
+                    // Después de confirmar, cierra el modal de confirmación final y abre el modal de pedido realizado
+                    $("#confirmacionFinalModal").modal('hide');
+                    $("#pedidoRealizadoModal").modal('show');
+                }
+            </script>
+            
+
+    
+
+                                                                                                                  
+
+
+
+
+
+
+
             <a href="mailto:tuemail@gmail.com"><img id="contacto" src="img/contacto.png" alt="Contacto"></a>
         </div>
+
 
        
     </nav> 
