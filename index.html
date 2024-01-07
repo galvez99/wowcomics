@@ -8,11 +8,8 @@
     <link rel="stylesheet" type="text/css" href="/interfaz/interfaz.css">
     <link rel="stylesheet" type="text/css" href="/css/general.css">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="/interfaz/masnuevos.js" defer></script>
-    <script src="/interfaz/bajanprecio.js" defer></script>
-    <script src="/interfaz/masvendidos.js" defer></script>
+    <script src="interfaz/productosinterfaz.js" defer></script>
     <script src="/interfaz/carousel.js" defer></script>
-    <script src="marvelLink.js" defer></script>
     <script type="text/javascript" src="/js/index.js"></script>
     <link rel="website icon" type="png" href="img/thanos.PNG">
     <title>WoW Comics</title>
@@ -45,8 +42,6 @@
                 <a href="sobrenosotros/sobrenosotros.html">Sobre Nosotros</a>
             </div>
         </div>
-       
-
 
         <div class="dropdown" id="mobile-dropdown">
             <div class="menu-icon">☰</div>
@@ -57,10 +52,10 @@
             </div>
         </div>
 
-
         <div class="search-bar">
-            <input type="text" placeholder="Buscar productos">
-        </div>
+            <input type="text" placeholder="Buscar productos" id="searchInput">
+            <ul class="search-results" id="searchResults"></ul>
+        </div>        
 
         <div class="icons">
             <img id="cliente" src="img/cliente.png" alt="Cliente">
@@ -88,11 +83,11 @@
                         </div>
                         <div class="modal-body">
                             <div class="mb-3">
-                                <label for="usuarioCorreo" class="form-label">Usuario o Correo Electrónico</label>
+                                <span for="usuarioCorreo" class="form-label">Usuario o Correo Electrónico</span>
                                 <input type="text" class="form-control">
                             </div>
                             <div class="mb-3">
-                                <label for="contrasena" class="form-label">Contraseña</label>
+                                <span for="contrasena" class="form-label">Contraseña</span>
                                 <input type="password" class="form-control">
                             </div>
                             <div class="modal-footer justify-content-center">
@@ -127,27 +122,27 @@
                         </div>
                         <div class="modal-body">
                             <div class="mb-3">
-                                <label for="gmail" class="form-label">Introduce Gmail</label>
+                                <span for="gmail" class="form-label">Introduce Gmail</span>
                                 <input type="email" class="form-control" id="gmail">
                             </div>
                             <div class="mb-3">
-                                <label for="usuario" class="form-label">Introduce Usuario</label>
+                                <span for="usuario" class="form-label">Introduce Usuario</span>
                                 <input type="text" class="form-control" id="usuario">
                             </div>
                             <div class="mb-3">
-                                <label for="nombre" class="form-label">Introduce Nombre</label>
+                                <span for="nombre" class="form-label">Introduce Nombre</span>
                                 <input type="text" class="form-control" id="nombre">
                             </div>
                             <div class="mb-3">
-                                <label for="apellido" class="form-label">Introduce Apellido</label>
+                                <span for="apellido" class="form-label">Introduce Apellido</span>
                                 <input type="text" class="form-control" id="apellido">
                             </div>
                             <div class="mb-3">
-                                <label for="fechaNacimiento" class="form-label">Introduce fecha nacimiento</label>
+                                <span for="fechaNacimiento" class="form-label">Introduce fecha nacimiento</span>
                                 <input type="date" class="form-control" id="fechaNacimiento">
                             </div>
                             <div class="mb-3">
-                                <label for="contrasena" class="form-label">Introduce contraseña</label>
+                                <span for="contrasena" class="form-label">Introduce contraseña</span>
                                 <input type="password" class="form-control" id="contrasena">
                             </div>
                             <div class="modal-footer justify-content-center">
@@ -171,42 +166,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            
-            <script>
-                $(document).ready(function() {
-                    $("#cliente").click(function() {
-                        $("#clienteModal").modal("show");
-                    });
-            
-                    $("#iniciarSesionBtn").click(function() {
-                        $("#clienteModal").modal("hide");
-                        $("#inicioSesionModal").modal("show");
-                    });
-            
-                    $("#registrarUsuarioBtn").click(function() {
-                        $("#clienteModal").modal("hide");
-                        $("#registroUsuarioModal").modal("show");
-                    });
-            
-                    $("#confirmarInicioSesionBtn").click(function() {
-                        $("#inicioSesionModal").modal("hide");
-                        $("#sesionIniciadaModal").modal("show");
-                    });
-            
-                    $("#cancelarInicioSesionBtn").click(function() {
-                        $("#inicioSesionModal").modal("hide");
-                        $("#clienteModal").modal("hide");
-                    });
-            
-                    $("#registrarBtn").click(function() {
-                        $("#registroUsuarioModal").modal("hide");
-                        $("#registroConfirmadoModal").modal("show");
-                    });
-                });
-            </script>
-
-
+            </div>           
 
             
             <img id="carrito" src="img/carrito.png" alt="Carrito">
@@ -218,7 +178,9 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <div id="itemsContainer"></div>
+                            <div id="cartContainer"> <!-- Nuevo contenedor para el carrito -->
+                                <div id="cartProducts"></div>
+                            </div>
                         </div>
                         <div class="modal-footer justify-content-center">
                             <button type="button" id="tramitar" class="btn" data-bs-dismiss="modal" onclick="mostrarDireccionEnvio()">Tramitar Pedido</button>
@@ -227,6 +189,7 @@
                     </div>
                 </div>
             </div>
+
 
             <div class="modal fade" id="direccionEnvioModal" tabindex="-1" aria-labelledby="direccionEnvioModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
@@ -237,31 +200,31 @@
                         </div>
                         <div class="modal-body">
                             <div class="mb-3">
-                                <label for="nombre" class="form-label">Nombre</label>
-                                <input type="text" class="form-control" id="nombre" required>
+                                <span for="nombre2" class="form-label">Nombre</span>
+                                <input type="text" class="form-control" id="nombre2" required>
                             </div>
                             <div class="mb-3">
-                                <label for="apellido" class="form-label">Apellido</label>
-                                <input type="text" class="form-control" id="apellido" required>
+                                <span for="apellido2" class="form-label">Apellido</span>
+                                <input type="text" class="form-control" id="apellido2" required>
                             </div>
                             <div class="mb-3">
-                                <label for="direccion" class="form-label">Dirección</label>
+                                <span for="direccion" class="form-label">Dirección</span>
                                 <input type="text" class="form-control" id="direccion" required>
                             </div>
                             <div class="mb-3">
-                                <label for="ciudad" class="form-label">Ciudad</label>
+                                <span for="ciudad" class="form-label">Ciudad</span>
                                 <input type="text" class="form-control" id="ciudad" required>
                             </div>
                             <div class="mb-3">
-                                <label for="codigoPostal" class="form-label">Código Postal</label>
+                                <span for="codigoPostal" class="form-label">Código Postal</span>
                                 <input type="text" class="form-control" id="codigoPostal" required>
                             </div>
                             <div class="mb-3">
-                                <label for="provincia" class="form-label">Provincia</label>
+                                <span for="provincia" class="form-label">Provincia</span>
                                 <input type="text" class="form-control" id="provincia" required>
                             </div>
                             <div class="mb-3">
-                                <label for="telefono" class="form-label">Teléfono</label>
+                                <span for="telefono" class="form-label">Teléfono</span>
                                 <input type="text" class="form-control" id="telefono" required>
                             </div>
 
@@ -302,19 +265,19 @@
                         </div>
                         <div class="modal-body">
                             <div class="mb-3">
-                                <label for="nombreTarjeta" class="form-label">Nombre</label>
+                                <span for="nombreTarjeta" class="form-label">Nombre</span>
                                 <input type="text" class="form-control" id="nombreTarjeta" required>
                             </div>
                             <div class="mb-3">
-                                <label for="numeroTarjeta" class="form-label">Número Tarjeta</label>
+                                <span for="numeroTarjeta" class="form-label">Número Tarjeta</span>
                                 <input type="text" class="form-control" id="numeroTarjeta" required>
                             </div>
                             <div class="mb-3">
-                                <label for="fechaCaducidad" class="form-label">Fecha Caducidad</label>
+                                <span for="fechaCaducidad" class="form-label">Fecha Caducidad</span>
                                 <input type="text" class="form-control" id="fechaCaducidad" required>
                             </div>
                             <div class="mb-3">
-                                <label for="cvv" class="form-label">CVV</label>
+                                <span for="cvv" class="form-label">CVV</span>
                                 <input type="text" class="form-control" id="cvv" required>
                             </div>
             
@@ -336,12 +299,12 @@
                         </div>
                         <div class="modal-body">
                             <div class="mb-3">
-                                <label for="resumen" class="form-label">Resumen</label>
+                                <span for="resumen" class="form-label">Resumen</span>
                                 <!-- Puedes mostrar aquí un resumen de la compra -->
                                 <p id="resumen"></p>
                             </div>
                             <div class="mb-3">
-                                <label for="precio" class="form-label">Precio</label>
+                                <span for="precio" class="form-label">Precio</span>
                                 <!-- Puedes mostrar aquí el precio total de la compra -->
                                 <p id="precio"></p>
                             </div>
@@ -434,8 +397,6 @@
                     $("#pedidoRealizadoModal").modal('show');
                 }
             </script>
-            
-
     
 
                                                                                                                   
