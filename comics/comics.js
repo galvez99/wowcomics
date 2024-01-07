@@ -29,6 +29,14 @@ $(document).ready(function () {
         aplicarOrden();
     });
 
+    $('#cargarMas').on('click', function () {
+        cargarMasComics();
+    });
+
+    $('#mostrarMenos').on('click', function () {
+        mostrarMenosComics();
+    });
+
     $(".container").on("click", ".add-to-cart-btn", function () {
         var index = $(this).data("index");
         anadirAlCarrito(datosComics[index]);
@@ -124,6 +132,17 @@ $(document).ready(function () {
 
         mostrarComics();
     }
+
+    function cargarMasComics() {
+        paginaActual++;
+        mostrarComics();
+    }
+    
+    function mostrarMenosComics() {
+            paginaActual = 1;
+            mostrarComics();
+    }
+    
 
     function sortByPrice(order) {
         datosComics.sort((a, b) => {

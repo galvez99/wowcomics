@@ -29,6 +29,14 @@ $(document).ready(function () {
         aplicarOrden();
     });
 
+    $('#cargarMas').on('click', function () {
+        cargarMasMerch();
+    });
+
+    $('#mostrarMenos').on('click', function () {
+        mostrarMenosMerch();
+    });
+
     $(".container").on("click", ".add-to-cart-btn", function() {
         var index = $(this).data("index");
         anadirAlCarrito(datosMerchandising[index]);
@@ -122,6 +130,16 @@ $(document).ready(function () {
             }
         });
 
+        mostrarMerchandising();
+    }
+
+    function cargarMasMerch() {
+        paginaActual++;
+        mostrarMerchandising();
+    }
+
+    function mostrarMenosMerch() {
+        paginaActual = 1;
         mostrarMerchandising();
     }
 
