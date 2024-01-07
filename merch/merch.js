@@ -4,6 +4,7 @@ $(document).ready(function () {
     var merchPorPagina = 16;
     var paginaActual = 1;
 
+    // Cargar datos iniciales desde el archivo JSON
     $.ajax({
         url: 'merch.json',
         type: 'GET',
@@ -15,6 +16,16 @@ $(document).ready(function () {
         error: function (error) {
             console.log('Error al cargar el JSON:', error);
         }
+    });
+
+
+    $('#filtrarPorPrecio').on('click', function () {
+        $('#filtroDropdownPrecio').toggle();
+    });
+
+
+    $('#aplicarFiltroPrecio').on('click', function () {
+        aplicarFiltro();
     });
 
     $('#btnOrdenar').on('click', function () {
@@ -157,5 +168,33 @@ $(document).ready(function () {
             const titleB = b.title.toLowerCase();
             return order === 'asc' ? titleA.localeCompare(titleB) : titleB.localeCompare(titleA);
         });
+    }
+
+    function aplicarFiltro() {
+        var merchFiltrado = filtrarMerchandising();
+        datosMerchandising = merchFiltrado;
+        paginaActual = 1;
+        mostrarMerchandising();
+        $('#filtroDropdownPrecio').hide();
+    }
+
+    function filtrarMerchandising() {
+        var selectedCategorias = $('#categoriaFilter').val();
+        var selectedTipos = $('#tipoFilter').val();
+        var precioMin = parseFloat($('#precioMin').val()) || 0;
+        var precioMax = parseFloat($('#precioMax').val()) || Number.MAX_VALUE;
+
+        var filteredMerch = datosMerchandising.filter(function (merch) {
+            var precio = parseFloat(merch.price.replace('€', '').replace(',', '.'));
+
+            return (
+                (selectedCategorias.length === 0 || selectedCategorias.includes(merch.categoria)) &&
+                (selectedTipos.length === 0 || selectedTipos.includes(merch.tipo)) &&
+                precio >= precioMin &&
+                precio <= precioMax
+            );
+        });
+
+        return filteredMerch;
     }
 });

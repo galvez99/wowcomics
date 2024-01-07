@@ -150,7 +150,7 @@
     margin-top: 20px;
 }
 
-.filtro-dropdown div label {
+.filtro-dropdown div span {
     margin-right: 10px;
 }
 
@@ -165,7 +165,6 @@
 }
 
 #publisherFilter{
-    
     margin-bottom: 20px;
 }
 
@@ -174,7 +173,7 @@
 }
 
 .filtro-container {
-
+    margin-top: 20px;
     flex-direction: column;
 }
 
@@ -183,15 +182,13 @@
 }
 
 
-
-
 #menuOrdenar{
     margin-bottom: 10px;
     padding-top: 20px;
     padding-bottom: 25px;
 }
 
-#menuOrdenar label{
+#menuOrdenar span{
     margin-right: 10px;
 }
 

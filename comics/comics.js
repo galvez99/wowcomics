@@ -17,6 +17,15 @@ $(document).ready(function () {
         }
     });
 
+    $('#filtrarPorPrecio').on('click', function () {
+        $('#filtroDropdownPrecio').toggle();
+    });
+
+
+    $('#aplicarFiltroPrecio').on('click', function () {
+        aplicarFiltro();
+    });
+
     $('#btnOrdenar').on('click', function () {
         mostrarMenuOrdenar();
     });
@@ -137,12 +146,11 @@ $(document).ready(function () {
         paginaActual++;
         mostrarComics();
     }
-    
+
     function mostrarMenosComics() {
-            paginaActual = 1;
-            mostrarComics();
+        paginaActual = 1;
+        mostrarComics();
     }
-    
 
     function sortByPrice(order) {
         datosComics.sort((a, b) => {
@@ -158,5 +166,29 @@ $(document).ready(function () {
             const titleB = b.title.toLowerCase();
             return order === 'asc' ? titleA.localeCompare(titleB) : titleB.localeCompare(titleA);
         });
+    }
+    
+    function aplicarFiltro() {
+        var comicsFiltrados = filtrarComics();
+        datosComics = comicsFiltrados;
+        paginaActual = 1;
+        mostrarComics();
+        $('#filtroDropdownPrecio').hide();
+    }
+
+    function filtrarComics() {
+        var selectedPublishers = $('#publisherFilter').val();
+        var precioMin = parseFloat($('#precioMin').val()) || 0;
+        var precioMax = parseFloat($('#precioMax').val()) || Number.MAX_VALUE;
+        var filteredComics = datosComics.filter(function (comic) {
+            var precio = parseFloat(comic.price.replace('€', '').replace(',', '.'));
+            return (
+                (selectedPublishers.length === 0 || selectedPublishers.includes(comic.publisher)) &&
+                precio >= precioMin &&
+                precio <= precioMax
+            );
+        });
+
+        return filteredComics;
     }
 });

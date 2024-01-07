@@ -478,14 +478,15 @@
             </select>
             <button id="aplicarOrden">Aplicar</button>
         </div>
-        <button onclick="filtrar()">
-            <img class="ordenar" src="/img/filtro.png">
+
+        <button id="filtrarPorPrecio">
+            <img class="ordenar" src="/img/filtro.png" alt="Carrito de compras">
             Filtrar
         </button>
-        <div id="filtroDropdown" class="filtro-dropdown" style="display: none;">
+        <div id="filtroDropdownPrecio" class="filtro-dropdown" style="display: none;">
             <div class="filtro-container">
                 <div>
-                    <h5>Filtrar por Marca:</h5>
+                    <span>Filtrar por Marca:</span>
                     <select id="publisherFilter" multiple>
                         <option value="Marvel">Marvel</option>
                         <option value="DC">DC</option>
@@ -494,11 +495,11 @@
                     </select>
                 </div>
                 <div>
-                    <h5>Filtrar por Precio:</h5>
+                    <span>Filtrar por Precio:</span>
                     <input type="number" id="precioMin" placeholder="Precio mínimo">
                     <input type="number" id="precioMax" placeholder="Precio máximo">
                 </div>
-                <button onclick="aplicarFiltro()">Aplicar</button>
+                <button id="aplicarFiltroPrecio">Aplicar</button>
             </div>
         </div>
         
