@@ -178,7 +178,7 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <div id="cartContainer"> <!-- Nuevo contenedor para el carrito -->
+                            <div id="cartContainer" class="cart-container"> <!-- Nuevo contenedor para el carrito -->
                                 <div id="cartProducts"></div>
                             </div>
                         </div>
@@ -298,19 +298,8 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <div class="mb-3">
-                                <span for="resumen" class="form-label">Resumen</span>
-                                <!-- Puedes mostrar aquí un resumen de la compra -->
-                                <p id="resumen"></p>
-                            </div>
-                            <div class="mb-3">
-                                <span for="precio" class="form-label">Precio</span>
-                                <!-- Puedes mostrar aquí el precio total de la compra -->
-                                <p id="precio"></p>
-                            </div>
-            
                             <div class="text-center">
-                                <button type="button" class="tarjeta btn" onclick="confirmarCompra()">Confirmar</button>
+                                <button type="button" class="tarjeta btn" onclick="confirmarCompra()">Pagar</button>
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
                             </div>
                         </div>
@@ -396,7 +385,7 @@
                     $("#confirmacionFinalModal").modal('hide');
                     $("#pedidoRealizadoModal").modal('show');
                 }
-            </script>
+            </script>                                   
     
 
                                                                                                                   
