@@ -54,8 +54,6 @@
                 <a href="/sobrenosotros/sobrenosotros.html">Sobre Nosotros</a>
             </div>
         </div>
-       
-
 
         <div class="dropdown" id="mobile-dropdown">
             <div class="menu-icon">☰</div>
@@ -65,7 +63,6 @@
                 <a href="/sobrenosotros/sobrenosotros.html">Sobre Nosotros</a>
             </div>
         </div>
-
 
         <div class="search-bar">
             <input type="text" placeholder="Buscar productos" id="searchInput">
@@ -183,10 +180,6 @@
                 </div>
             </div>
             
-
-
-
-            
             <img id="carrito" src="/img/carrito.png" alt="Carrito">
             <div class="modal fade" id="carritoModal" tabindex="-1" aria-labelledby="carritoModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -196,7 +189,7 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <div id="cartContainer"> <!-- Nuevo contenedor para el carrito -->
+                            <div id="cartContainer" class="cart-container">
                                 <div id="cartProducts"></div>
                             </div>
                         </div>
@@ -207,7 +200,6 @@
                     </div>
                 </div>
             </div>
-
 
             <div class="modal fade" id="direccionEnvioModal" tabindex="-1" aria-labelledby="direccionEnvioModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
@@ -316,19 +308,8 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <div class="mb-3">
-                                <span for="resumen" class="form-label">Resumen</span>
-                                <!-- Puedes mostrar aquí un resumen de la compra -->
-                                <p id="resumen"></p>
-                            </div>
-                            <div class="mb-3">
-                                <span for="precio" class="form-label">Precio</span>
-                                <!-- Puedes mostrar aquí el precio total de la compra -->
-                                <p id="precio"></p>
-                            </div>
-            
                             <div class="text-center">
-                                <button type="button" class="tarjeta btn" onclick="confirmarCompra()">Confirmar</button>
+                                <button type="button" class="tarjeta btn" onclick="confirmarCompra()">Pagar</button>
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
                             </div>
                         </div>
@@ -403,27 +384,20 @@
                 function continuarIntroducirTarjeta() {
                     $("#introducirTarjetaModal").modal('hide');
                     $("#confirmacionFinalModal").modal('show');
-                    // Puedes agregar aquí la lógica para llenar el resumen y precio antes de mostrar el modal
-                    $("#resumen").text("Resumen de la compra: ...");  // Completa con la información adecuada
-                    $("#precio").text("Precio total: ...");  // Completa con la información adecuada
+                    $("#resumen").text("Resumen de la compra: ...");  
+                    $("#precio").text("Precio total: ...");  
                 }
 
                 function confirmarCompra() {
-                    // Puedes agregar aquí la lógica para confirmar la compra
-                    // Después de confirmar, cierra el modal de confirmación final y abre el modal de pedido realizado
                     $("#confirmacionFinalModal").modal('hide');
                     $("#pedidoRealizadoModal").modal('show');
                 }
-            </script>
+            </script>  
 
             <a href="mailto:tuemail@gmail.com"><img id="contacto" src="/img/contacto.png" alt="Contacto"></a>
         </div>
-
-       
     </nav> 
 
-
-   
     <div id="carousel-container">
       <div id="carousel-wrapper"></div>
     </div>
@@ -474,7 +448,6 @@
       });
   </script>
   
-      
     <h1 id="merchh">Merchandising</h1>
 
     <div id="acciones">
@@ -524,15 +497,11 @@
                 <button id="aplicarFiltroPrecio">Aplicar</button>
             </div>
         </div>
-        
     </div>
 
     <div class="container text-center" id="merch-container">
-        <!-- La estructura de las tarjetas se agregará aquí dinámicamente -->
     </div>
 
-   
-    
     <div id="cargarMas">
         <button id="btnCargarMas">Mostrar más</button>
     </div>
@@ -540,9 +509,6 @@
     <div id="mostrarMenos" style="display:none;">
         <button id="btnMostrarMenos">Mostrar menos</button>
     </div>
-    
-
-
 
     <footer>
         <a class="elemento" href="/avisolegal/avisolegal.html"> Aviso legal </a>

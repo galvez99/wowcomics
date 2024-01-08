@@ -180,8 +180,7 @@
                     </div>
                 </div>
             </div>           
-
-            
+   
             <img id="carrito" src="img/carrito.png" alt="Carrito">
             <div class="modal fade" id="carritoModal" tabindex="-1" aria-labelledby="carritoModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -191,7 +190,7 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <div id="cartContainer" class="cart-container"> <!-- Nuevo contenedor para el carrito -->
+                            <div id="cartContainer" class="cart-container">
                                 <div id="cartProducts"></div>
                             </div>
                         </div>
@@ -387,37 +386,21 @@
                 function continuarIntroducirTarjeta() {
                     $("#introducirTarjetaModal").modal('hide');
                     $("#confirmacionFinalModal").modal('show');
-                    // Puedes agregar aquí la lógica para llenar el resumen y precio antes de mostrar el modal
-                    $("#resumen").text("Resumen de la compra: ...");  // Completa con la información adecuada
-                    $("#precio").text("Precio total: ...");  // Completa con la información adecuada
+                    $("#resumen").text("Resumen de la compra: ...");  
+                    $("#precio").text("Precio total: ...");  
                 }
 
                 function confirmarCompra() {
-                    // Puedes agregar aquí la lógica para confirmar la compra
-                    // Después de confirmar, cierra el modal de confirmación final y abre el modal de pedido realizado
                     $("#confirmacionFinalModal").modal('hide');
                     $("#pedidoRealizadoModal").modal('show');
                 }
             </script>                                   
-    
-
-                                                                                                                  
-
-
-
-
-
-
 
             <a href="mailto:tuemail@gmail.com"><img id="contacto" src="img/contacto.png" alt="Contacto"></a>
         </div>
-
-
-       
+  
     </nav> 
 
-
-   
     <div id="carousel-container">
       <div id="carousel-wrapper"></div>
     </div>
@@ -467,8 +450,6 @@
           setInterval(nextSlide, 5000);
       });
     </script>
-      
-
 
     <h1 id="nuevos_lanzamientos">Nuevos Lanzamientos</h1>
     <div id="carouselExampleControls" class="carousel">
@@ -484,7 +465,6 @@
           <span class="visually-hidden">Next</span>
         </button>
     </div>
-
 
     <h1 id="bajan_precio">Bajan De Precio</h1>
 
@@ -502,12 +482,10 @@
         </button>
       </div>
 
-
     <h1 id="mas_vendidos">Los más vendidos</h1>
 
     <div id="carouselExampleControls3" class="carousel">
         <div class="carousel-inner">
- 
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls3" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>

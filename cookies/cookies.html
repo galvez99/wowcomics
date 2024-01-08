@@ -54,8 +54,6 @@
                 <a href="/sobrenosotros/sobrenosotros.html">Sobre Nosotros</a>
             </div>
         </div>
-       
-
 
         <div class="dropdown" id="mobile-dropdown">
             <div class="menu-icon">☰</div>
@@ -183,10 +181,6 @@
                 </div>
             </div>
             
-
-
-
-            
             <img id="carrito" src="/img/carrito.png" alt="Carrito">
             <div class="modal fade" id="carritoModal" tabindex="-1" aria-labelledby="carritoModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -196,7 +190,9 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <div id="itemsContainer"></div>
+                            <div id="cartContainer" class="cart-container">
+                                <div id="cartProducts"></div>
+                            </div>
                         </div>
                         <div class="modal-footer justify-content-center">
                             <button type="button" id="tramitar" class="btn" data-bs-dismiss="modal" onclick="mostrarDireccionEnvio()">Tramitar Pedido</button>
@@ -215,31 +211,31 @@
                         </div>
                         <div class="modal-body">
                             <div class="mb-3">
-                                <label for="nombre" class="form-label">Nombre</label>
-                                <input type="text" class="form-control" id="nombre" required>
+                                <span for="nombre2" class="form-label">Nombre</span>
+                                <input type="text" class="form-control" id="nombre2" required>
                             </div>
                             <div class="mb-3">
-                                <label for="apellido" class="form-label">Apellido</label>
-                                <input type="text" class="form-control" id="apellido" required>
+                                <span for="apellido2" class="form-label">Apellido</span>
+                                <input type="text" class="form-control" id="apellido2" required>
                             </div>
                             <div class="mb-3">
-                                <label for="direccion" class="form-label">Dirección</label>
+                                <span for="direccion" class="form-label">Dirección</span>
                                 <input type="text" class="form-control" id="direccion" required>
                             </div>
                             <div class="mb-3">
-                                <label for="ciudad" class="form-label">Ciudad</label>
+                                <span for="ciudad" class="form-label">Ciudad</span>
                                 <input type="text" class="form-control" id="ciudad" required>
                             </div>
                             <div class="mb-3">
-                                <label for="codigoPostal" class="form-label">Código Postal</label>
+                                <span for="codigoPostal" class="form-label">Código Postal</span>
                                 <input type="text" class="form-control" id="codigoPostal" required>
                             </div>
                             <div class="mb-3">
-                                <label for="provincia" class="form-label">Provincia</label>
+                                <span for="provincia" class="form-label">Provincia</span>
                                 <input type="text" class="form-control" id="provincia" required>
                             </div>
                             <div class="mb-3">
-                                <label for="telefono" class="form-label">Teléfono</label>
+                                <span for="telefono" class="form-label">Teléfono</span>
                                 <input type="text" class="form-control" id="telefono" required>
                             </div>
 
@@ -280,19 +276,19 @@
                         </div>
                         <div class="modal-body">
                             <div class="mb-3">
-                                <label for="nombreTarjeta" class="form-label">Nombre</label>
+                                <span for="nombreTarjeta" class="form-label">Nombre</span>
                                 <input type="text" class="form-control" id="nombreTarjeta" required>
                             </div>
                             <div class="mb-3">
-                                <label for="numeroTarjeta" class="form-label">Número Tarjeta</label>
+                                <span for="numeroTarjeta" class="form-label">Número Tarjeta</span>
                                 <input type="text" class="form-control" id="numeroTarjeta" required>
                             </div>
                             <div class="mb-3">
-                                <label for="fechaCaducidad" class="form-label">Fecha Caducidad</label>
+                                <span for="fechaCaducidad" class="form-label">Fecha Caducidad</span>
                                 <input type="text" class="form-control" id="fechaCaducidad" required>
                             </div>
                             <div class="mb-3">
-                                <label for="cvv" class="form-label">CVV</label>
+                                <span for="cvv" class="form-label">CVV</span>
                                 <input type="text" class="form-control" id="cvv" required>
                             </div>
             
@@ -313,19 +309,8 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <div class="mb-3">
-                                <label for="resumen" class="form-label">Resumen</label>
-                                <!-- Puedes mostrar aquí un resumen de la compra -->
-                                <p id="resumen"></p>
-                            </div>
-                            <div class="mb-3">
-                                <label for="precio" class="form-label">Precio</label>
-                                <!-- Puedes mostrar aquí el precio total de la compra -->
-                                <p id="precio"></p>
-                            </div>
-            
                             <div class="text-center">
-                                <button type="button" class="tarjeta btn" onclick="confirmarCompra()">Confirmar</button>
+                                <button type="button" class="tarjeta btn" onclick="confirmarCompra()">Pagar</button>
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
                             </div>
                         </div>
@@ -347,15 +332,68 @@
                 </div>
             </div>
 
-    
+            <script>
+                $(document).ready(function(){
+                    $("#carrito").click(function(){
+                        $("#carritoModal").modal('show');
+                    });
+                });
+            
+                function mostrarDireccionEnvio() {
+                    $("#carritoModal").modal('hide');
+                    $("#direccionEnvioModal").modal('show');
+                }
+            
+                function mostrarMetodoPago() {
+                    $("#direccionEnvioModal").modal('hide');
+                    $("#metodoPagoModal").modal('show');
+                }
+            
+                function continuarCompra() {
+                    $("#carritoModal").modal('hide');
+                    $("#direccionEnvioModal").modal('hide');
+                }
+            
+                function seleccionarTarjeta() {
+                    $("#metodoPagoModal").modal('hide');
+                }
+            
+                function seleccionarContrareembolso() {
+                    $("#metodoPagoModal").modal('hide');
+                }
 
-                                                                                                                  
+                function seleccionarTarjeta() {
+                    $("#introducirTarjetaModal").modal('show');
+                    $("#metodoPagoModal").modal('hide');
+                }
 
+                function continuarIntroducirTarjeta() {
+                    $("#introducirTarjetaModal").modal('hide');
+                }
 
+                function seleccionarContrareembolso() {
+                    $("#metodoPagoModal").modal('hide');
+                    $("#confirmacionFinalModal").modal('show');
+                    $("#resumen").text("Resumen de la compra: ...");  
+                    $("#precio").text("Precio total: ...");  
+                }
 
+                function confirmarCompra() {
+                    $("#confirmacionFinalModal").modal('hide');
+                }
 
+                function continuarIntroducirTarjeta() {
+                    $("#introducirTarjetaModal").modal('hide');
+                    $("#confirmacionFinalModal").modal('show');
+                    $("#resumen").text("Resumen de la compra: ...");  
+                    $("#precio").text("Precio total: ...");  
+                }
 
-
+                function confirmarCompra() {
+                    $("#confirmacionFinalModal").modal('hide');
+                    $("#pedidoRealizadoModal").modal('show');
+                }
+            </script>  
 
             <a href="mailto:tuemail@gmail.com"><img id="contacto" src="/img/contacto.png" alt="Contacto"></a>
         </div>
@@ -363,19 +401,12 @@
        
     </nav> 
 
-
-    
-
-
     <div id="contenedor">
         <div id="loading-message">Cargando datos...</div>
 
         
         <div id="cookies-container"></div>
     </div>
-
-
-
 
     <footer>
         <a class="elemento" href="/avisolegal/avisolegal.html"> Aviso legal </a>
