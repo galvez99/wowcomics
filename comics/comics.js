@@ -4,52 +4,53 @@ $(document).ready(function () {
     var comicsPorPagina = 16;
     var paginaActual = 1;
 
-    $.ajax({
-        url: 'comics.json',
-        type: 'GET',
-        dataType: 'json',
-        success: function (data) {
-            datosComics = data.comics;
-            mostrarComics();
-        },
-        error: function (error) {
-            console.log('Error al cargar el JSON:', error);
-        }
-    });
+    function cargarDatosComics() {
+        $.ajax({
+            url: 'comics.json',
+            type: 'GET',
+            dataType: 'json',
+            success: function (data) {
+                datosComics = data.comics;
+                mostrarComics();
+            },
+            error: function (error) {
+                console.log('Error al cargar el JSON:', error);
+            }
+        });
+    }
 
-    $('#filtrarPorPrecio').on('click', function () {
+    function toggleFiltroPrecio() {
         $('#filtroDropdownPrecio').toggle();
-    });
+    }
 
-
-    $('#aplicarFiltroPrecio').on('click', function () {
+    function clickFiltroPrecio() {
         aplicarFiltro();
-    });
+    }
 
-    $('#btnOrdenar').on('click', function () {
+    function clickOrdenar() {
         mostrarMenuOrdenar();
-    });
+    }
 
-    $('#ordenarPor').on('change', function () {
+    function changeOrdenar() {
         aplicarOrden();
-    });
+    }
 
-    $('#aplicarOrden').on('click', function () {
+    function clickAplicarOrden() {
         aplicarOrden();
-    });
+    }
 
-    $('#cargarMas').on('click', function () {
+    function clickCargarMas() {
         cargarMasComics();
-    });
+    }
 
-    $('#mostrarMenos').on('click', function () {
+    function clickMostrarMenos() {
         mostrarMenosComics();
-    });
+    }
 
-    $(".container").on("click", ".add-to-cart-btn", function () {
+    function clickAddToCart() {
         var index = $(this).data("index");
         anadirAlCarrito(datosComics[index]);
-    });
+    }
 
     function mostrarComics() {
         var indiceInicio = (paginaActual - 1) * comicsPorPagina;
@@ -102,17 +103,58 @@ $(document).ready(function () {
         var cartProductsContainer = $("#cartProducts");
         cartProductsContainer.empty();
 
-        cartItems.forEach(function (item) {
+        cartItems.forEach(function (item, index) {
             var cartItemContent = `
                 <div class="cart-item">
                     <div class="cart-item-info">
-                        <span class="cart-item-title">${item.title}</span>
-                        <span class="cart-item-price">${item.price}</span>
+                        <h5 class="cart-item-title">${item.title || item.titulo1 || item.title2}</h5>
+                        <h5 class="cart-item-price">${item.price || item.precio1 || item.precio2}</h5>
                     </div>
-                    <img src="${item.imageSrc}" alt="${item.altText}">
+                    <img src="${item.imageSrc || item.imagenSrc1 || item.imagenSrc2}" alt="${item.altText || item.altText01 || item.altText2}" class="imagenproducto">
+                    <div class="quantity-dropdown">
+                        <label for="quantity${index}">Cantidad:</label>
+                        <select id="quantity${index}" class="quantity-selector" data-index="${index}">
+                            ${generateQuantityOptions(item.quantity)}
+                        </select>
+                    </div>
+                    <button class="remove-from-cart-btn" data-index="${index}" data-quantity="${item.quantity || 1}">X</button>
                 </div>`;
             cartProductsContainer.append(cartItemContent);
         });
+
+        var totalPrice = cartItems.reduce(function (acc, item) {
+            return acc + parseFloat(item.price || item.precio1 || item.precio2) * (item.quantity || 1);
+        }, 0);
+
+        var totalContent = `<h5 class="cart-total">Total: ${totalPrice.toFixed(2)}</h5>`;
+        cartProductsContainer.append(totalContent);
+
+        $(".remove-from-cart-btn").click(function () {
+            var indexToRemove = $(this).data("index");
+            cartItems.splice(indexToRemove, 1);
+            updateCartUI();
+        });
+
+        $(".quantity-selector").change(function () {
+            var index = $(this).data("index");
+            var newQuantity = parseInt($(this).val());
+
+            if (newQuantity === 0) {
+                cartItems.splice(index, 1);
+            } else {
+                cartItems[index].quantity = newQuantity;
+            }
+
+            updateCartUI();
+        });
+    }
+
+    function generateQuantityOptions(selectedQuantity) {
+        var options = "";
+        for (var i = 0; i <= 10; i++) {
+            options += `<option value="${i}" ${i === selectedQuantity || (i === 1 && selectedQuantity === undefined) ? 'selected' : ''}>${i}</option>`;
+        }
+        return options;
     }
 
     function mostrarMenuOrdenar() {
@@ -167,7 +209,7 @@ $(document).ready(function () {
             return order === 'asc' ? titleA.localeCompare(titleB) : titleB.localeCompare(titleA);
         });
     }
-    
+
     function aplicarFiltro() {
         var comicsFiltrados = filtrarComics();
         datosComics = comicsFiltrados;
@@ -191,4 +233,16 @@ $(document).ready(function () {
 
         return filteredComics;
     }
+
+    // Event Listeners
+    cargarDatosComics();
+
+    $('#filtrarPorPrecio').on('click', toggleFiltroPrecio);
+    $('#aplicarFiltroPrecio').on('click', clickFiltroPrecio);
+    $('#btnOrdenar').on('click', clickOrdenar);
+    $('#ordenarPor').on('change', changeOrdenar);
+    $('#aplicarOrden').on('click', clickAplicarOrden);
+    $('#cargarMas').on('click', clickCargarMas);
+    $('#mostrarMenos').on('click', clickMostrarMenos);
+    $(".container").on("click", ".add-to-cart-btn", clickAddToCart);
 });

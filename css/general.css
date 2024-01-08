@@ -5,7 +5,42 @@
     letter-spacing: 2px;
 }
 
+.dropdown {
+    position: relative;
+    display: inline-block;
+    z-index: 2; /* por encima del carrusel */
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #002b80;
+    min-width: 100px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 3; /* por encima del carrusel */
+}
+.dropdown-content a {
+    text-align: center;
+    color: white;
+    padding: 7px 11px; 
+    padding-bottom: 10px;
+}
 
+.dropdown-content a {
+    text-align: center;
+    color: white;
+    padding: 7px 11px; 
+    padding-bottom: 10px;
+    display: block;
+    text-decoration: none;
+    font-size: 25px; 
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+#drop2{
+    margin-left: 38px;
+}
 
 #itemsContainer {
     max-width: 400px; /* o el ancho que desees */
